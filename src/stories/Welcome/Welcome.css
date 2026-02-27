@@ -1,0 +1,187 @@
+.welcome-page {
+  min-height: calc(100vh - 48px);
+  padding: clamp(28px, 4vw, 64px);
+  display: grid;
+  gap: clamp(34px, 5vw, 72px);
+  background: var(--semantic-color-surface-primary);
+  color: var(--semantic-color-text-primary);
+}
+
+.welcome-header {
+  display: grid;
+  gap: 16px;
+  max-width: 860px;
+}
+
+.welcome-logo {
+  width: 220px;
+  height: auto;
+  display: block;
+}
+
+.welcome-title {
+  margin: 0;
+  font-family: var(--core-typography-font-family-primary), "Gustavo", sans-serif;
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.05;
+}
+
+.welcome-copy {
+  margin: 0;
+  font-family: var(--core-typography-font-family-secondary), "Surt", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--semantic-color-text-primary);
+}
+
+.welcome-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.welcome-quicklinks {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.welcome-quicklink {
+  text-decoration: none;
+  color: var(--semantic-color-text-primary);
+  border: 1px solid var(--semantic-color-border-subtle);
+  border-radius: 999px;
+  background: var(--semantic-color-surface-secondary);
+  padding: 8px 14px;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.welcome-quicklink:hover {
+  background: color-mix(in srgb, var(--core-color-brand-ice-blue-100) 55%, transparent);
+}
+
+.welcome-card {
+  border: 1px solid var(--semantic-color-border-subtle);
+  border-radius: 14px;
+  background: var(--semantic-color-surface-secondary);
+  overflow: hidden;
+  display: grid;
+  align-content: start;
+}
+
+.welcome-card-art {
+  height: 108px;
+  background-color: #000;
+  background-image:
+    linear-gradient(90deg, transparent 0 4%, #fff 4% 5%, transparent 5% 24%, #fff 24% 25%, transparent 25% 44%, #fff 44% 45%, transparent 45% 64%, #fff 64% 65%, transparent 65% 84%, #fff 84% 85%, transparent 85% 100%),
+    radial-gradient(circle at 20% 40%, transparent 0 22px, #fff 22px 24px, transparent 24px),
+    radial-gradient(circle at 56% 72%, transparent 0 30px, #fff 30px 32px, transparent 32px);
+}
+
+.welcome-card-body {
+  padding: 18px 20px 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.welcome-card h3 {
+  margin: 0;
+  font-family: var(--core-typography-font-family-primary), "Gustavo", sans-serif;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.welcome-card p {
+  margin: 0;
+  font-family: var(--core-typography-font-family-secondary), "Surt", sans-serif;
+  font-weight: 300;
+  color: var(--semantic-color-text-primary);
+  font-size: 14px;
+}
+
+.welcome-links {
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+}
+
+.welcome-links li {
+  min-width: 0;
+}
+
+.welcome-links a {
+  text-decoration: none;
+  color: var(--semantic-color-text-primary);
+  font-size: 14px;
+  line-height: 1.4;
+  border-bottom: 1px solid transparent;
+}
+
+.welcome-links a:hover {
+  border-bottom-color: currentColor;
+}
+
+.welcome-card-color .welcome-card-art {
+  background-image:
+    radial-gradient(circle at 14% 50%, transparent 0 26px, #fff 26px 28px, transparent 28px),
+    radial-gradient(circle at 40% 50%, transparent 0 26px, #fff 26px 28px, transparent 28px),
+    radial-gradient(circle at 66% 50%, transparent 0 26px, #fff 26px 28px, transparent 28px),
+    radial-gradient(circle at 92% 50%, transparent 0 26px, #fff 26px 28px, transparent 28px);
+}
+
+.welcome-card-type .welcome-card-art {
+  background-image:
+    linear-gradient(0deg, transparent 0 70%, #fff 70% 73%, transparent 73% 100%),
+    linear-gradient(120deg, transparent 0 15%, #fff 15% 17%, transparent 17% 100%),
+    radial-gradient(circle at 80% 78%, transparent 0 34px, #fff 34px 36px, transparent 36px);
+}
+
+.welcome-card-layout .welcome-card-art {
+  background-image:
+    linear-gradient(90deg, transparent 0 11%, #fff 11% 12%, transparent 12% 22%, #fff 22% 23%, transparent 23% 33%, #fff 33% 34%, transparent 34% 44%, #fff 44% 45%, transparent 45% 55%, #fff 55% 56%, transparent 56% 66%, #fff 66% 67%, transparent 67% 77%, #fff 77% 78%, transparent 78% 88%, #fff 88% 89%, transparent 89% 100%),
+    linear-gradient(0deg, transparent 0 28%, #fff 28% 29%, transparent 29% 58%, #fff 58% 59%, transparent 59% 100%);
+}
+
+.welcome-card-components .welcome-card-art {
+  background-image:
+    linear-gradient(145deg, transparent 0 20%, #fff 20% 22%, transparent 22% 52%, #fff 52% 54%, transparent 54% 84%, #fff 84% 86%, transparent 86% 100%),
+    radial-gradient(circle at 82% 30%, transparent 0 18px, #fff 18px 20px, transparent 20px);
+}
+
+.welcome-card-brand .welcome-card-art {
+  background-image:
+    linear-gradient(55deg, transparent 0 30%, #fff 30% 32%, transparent 32% 52%, #fff 52% 54%, transparent 54% 74%, #fff 74% 76%, transparent 76% 100%),
+    radial-gradient(circle at 22% 72%, transparent 0 24px, #fff 24px 26px, transparent 26px);
+}
+
+.welcome-card-tokens .welcome-card-art {
+  background-image:
+    radial-gradient(circle at 16% 42%, transparent 0 19px, #fff 19px 21px, transparent 21px),
+    radial-gradient(circle at 36% 42%, transparent 0 19px, #fff 19px 21px, transparent 21px),
+    radial-gradient(circle at 56% 42%, transparent 0 19px, #fff 19px 21px, transparent 21px),
+    radial-gradient(circle at 76% 42%, transparent 0 19px, #fff 19px 21px, transparent 21px),
+    linear-gradient(0deg, transparent 0 68%, #fff 68% 69%, transparent 69% 100%);
+}
+
+@media (max-width: 640px) {
+  .welcome-title {
+    font-size: 36px;
+  }
+
+  .welcome-copy {
+    font-size: 16px;
+  }
+
+  .welcome-card {
+    min-height: 0;
+  }
+
+  .welcome-card h3 {
+    font-size: 34px;
+  }
+}

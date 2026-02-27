@@ -1,0 +1,44 @@
+:root {
+  --ds-font-heading: var(--core-typography-font-family-primary), "Gustavo", serif;
+  --ds-font-body: var(--core-typography-font-family-secondary), "Surt", sans-serif;
+}
+
+body,
+.sb-show-main,
+.docs-story,
+.sbdocs,
+.sbdocs-wrapper,
+.sbdocs-content {
+  font-family: var(--ds-font-body);
+  font-weight: 300;
+  color: var(--semantic-color-text-primary);
+  background: var(--semantic-color-surface-primary);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sbdocs-title,
+.sbdocs h1,
+.sbdocs h2,
+.sbdocs h3,
+.sbdocs h4,
+.sbdocs h5,
+.sbdocs h6 {
+  font-family: var(--ds-font-heading);
+  color: var(--semantic-color-text-primary);
+  letter-spacing: 0;
+}
+
+.sbdocs p,
+.sbdocs li,
+.docblock-argstable,
+.docblock-source {
+  font-family: var(--ds-font-body);
+  font-weight: 300;
+  color: var(--semantic-color-text-primary);
+}
