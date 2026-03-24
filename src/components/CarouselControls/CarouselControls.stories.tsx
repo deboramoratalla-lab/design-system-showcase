@@ -5,7 +5,7 @@ import { CarouselDots } from '../CarouselDots'
 import { CarouselControls } from './CarouselControls'
 
 const meta: Meta<typeof CarouselControls> = {
-  title: 'Components/Navigation/Carousel Controls',
+  title: 'Components/Navigation/Patterns/Carousel Controls',
   component: CarouselControls,
   parameters: {
     layout: 'centered',
@@ -28,7 +28,7 @@ export default meta
 
 type Story = StoryObj<typeof CarouselControls>
 
-export const Base: Story = {
+export const Interactive: Story = {
   render: (args) => {
     const initialActiveIndex = args.activeIndex ?? 0
     const slideCount = args.slideCount ?? 1

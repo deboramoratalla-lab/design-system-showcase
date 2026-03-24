@@ -3,7 +3,7 @@ import { ArrowLeft, X } from 'lucide-react'
 import { AppHeader } from './AppHeader'
 
 const meta: Meta<typeof AppHeader> = {
-  title: 'Components/Navigation/App Header',
+  title: 'Components/Navigation/Patterns/App Header',
   component: AppHeader,
   parameters: { layout: 'centered' },
   args: {
@@ -16,7 +16,7 @@ export default meta
 
 type Story = StoryObj<typeof AppHeader>
 
-export const Base: Story = {}
+export const Default: Story = {}
 
 export const WithActions: Story = {
   args: {

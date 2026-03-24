@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { CarouselArrowButton } from './CarouselArrowButton'
 
 const meta: Meta<typeof CarouselArrowButton> = {
-  title: 'Components/Navigation/Carousel Arrow Button',
+  title: 'Components/Navigation/Primitives/Carousel Arrow Button',
   component: CarouselArrowButton,
   parameters: {
     layout: 'centered',

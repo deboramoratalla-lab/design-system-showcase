@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Tabs } from './Tabs'
 
 const meta: Meta<typeof Tabs> = {
-  title: 'Components/Navigation/Tabs',
+  title: 'Components/Navigation/Primitives/Tabs',
   component: Tabs,
   parameters: { layout: 'centered' },
   args: {
@@ -19,14 +19,14 @@ export default meta
 
 type Story = StoryObj<typeof Tabs>
 
-export const Base: Story = {
+export const Default: Story = {
   render: (args) => {
     const [value, setValue] = useState(args.value)
     return <Tabs {...args} value={value} onChange={setValue} />
   },
 }
 
-export const ThreeTabs: Story = {
+export const ThreeOptions: Story = {
   render: () => {
     const [value, setValue] = useState('overview')
     return (

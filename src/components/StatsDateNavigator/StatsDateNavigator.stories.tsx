@@ -3,7 +3,7 @@ import { CalendarDays } from 'lucide-react'
 import { StatsDateNavigator } from './StatsDateNavigator'
 
 const meta: Meta<typeof StatsDateNavigator> = {
-  title: 'Components/Navigation/Stats Date Navigator',
+  title: 'Components/Navigation/Patterns/Stats Date Navigator',
   component: StatsDateNavigator,
   parameters: { layout: 'centered' },
   args: {
@@ -17,9 +17,9 @@ export default meta
 
 type Story = StoryObj<typeof StatsDateNavigator>
 
-export const Base: Story = {}
+export const Default: Story = {}
 
-export const Month: Story = {
+export const MonthView: Story = {
   args: {
     label: 'Month',
     detail: 'March 2025',

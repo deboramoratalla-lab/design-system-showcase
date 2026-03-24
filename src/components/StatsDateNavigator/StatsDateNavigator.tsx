@@ -16,11 +16,20 @@ function cx(...parts: Array<string | false | null | undefined>) {
 
 export const StatsDateNavigator = React.forwardRef<HTMLDivElement, StatsDateNavigatorProps>(
   ({ label, detail, leadingIcon, onLeadingClick, leadingButtonLabel = 'Change date', className, ...rest }, ref) => {
+    const hasLeadingAction = Boolean(leadingIcon)
+
     return (
       <div ref={ref} className={cx('ds-stats-date-navigator', className)} {...rest}>
-        <button type="button" className="ds-stats-date-navigator__button" onClick={onLeadingClick} aria-label={leadingButtonLabel}>
-          {leadingIcon}
-        </button>
+        {hasLeadingAction ? (
+          <button
+            type="button"
+            className="ds-stats-date-navigator__button"
+            onClick={onLeadingClick}
+            aria-label={leadingButtonLabel}
+          >
+            {leadingIcon}
+          </button>
+        ) : null}
 
         <TextStack
           className="ds-stats-date-navigator__copy"

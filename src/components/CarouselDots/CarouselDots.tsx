@@ -12,7 +12,7 @@ function cx(...parts: Array<string | false | null | undefined>) {
 
 export const CarouselDots = React.forwardRef<HTMLDivElement, CarouselDotsProps>(
   ({ slideCount, activeIndex = 0, className, ...rest }, ref) => {
-    const total = Math.max(slideCount, 2)
+    const total = Math.max(slideCount, 0)
     const safeActiveIndex = Math.min(Math.max(activeIndex, 0), total - 1)
 
     return (

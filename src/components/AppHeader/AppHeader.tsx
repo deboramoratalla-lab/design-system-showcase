@@ -10,6 +10,8 @@ export interface AppHeaderProps extends React.HTMLAttributes<HTMLElement> {
   trailingIcon?: React.ReactNode
   onLeadingClick?: () => void
   onTrailingClick?: () => void
+  leadingActionLabel?: string
+  trailingActionLabel?: string
   centerTitle?: boolean
 }
 
@@ -26,6 +28,8 @@ export const AppHeader = React.forwardRef<HTMLElement, AppHeaderProps>(
       trailingIcon,
       onLeadingClick,
       onTrailingClick,
+      leadingActionLabel = 'Go back',
+      trailingActionLabel = 'More options',
       centerTitle = false,
       className,
       ...rest
@@ -45,8 +49,8 @@ export const AppHeader = React.forwardRef<HTMLElement, AppHeaderProps>(
               className="ds-app-header__action"
               leadingIcon={leadingIcon}
               iconOnly
-              aria-label="Leading action"
-              title="Leading action"
+              aria-label={leadingActionLabel}
+              title={leadingActionLabel}
               onClick={onLeadingClick}
               variant="secondary"
               size="sm"
@@ -67,8 +71,8 @@ export const AppHeader = React.forwardRef<HTMLElement, AppHeaderProps>(
               className="ds-app-header__action"
               leadingIcon={trailingIcon}
               iconOnly
-              aria-label="Trailing action"
-              title="Trailing action"
+              aria-label={trailingActionLabel}
+              title={trailingActionLabel}
               onClick={onTrailingClick}
               variant="secondary"
               size="sm"

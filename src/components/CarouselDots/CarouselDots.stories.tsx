@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite'
 import { CarouselDots } from './CarouselDots'
 
 const meta: Meta<typeof CarouselDots> = {
-  title: 'Components/Navigation/Carousel Dots',
+  title: 'Components/Navigation/Primitives/Carousel Dots',
   component: CarouselDots,
   parameters: {
     layout: 'centered',
@@ -25,9 +25,9 @@ export default meta
 
 type Story = StoryObj<typeof CarouselDots>
 
-export const Base: Story = {}
+export const Default: Story = {}
 
-export const Middle: Story = {
+export const MidSequence: Story = {
   args: {
     slideCount: 6,
     activeIndex: 2,

@@ -12,7 +12,7 @@ const iconSet: Record<AthleteTabKey, AthleteTabBarIconConfig> = {
 }
 
 const meta: Meta<typeof AthleteTabBar> = {
-  title: 'Components/Navigation/Athlete Tab Bar',
+  title: 'Components/Navigation/Product/Athlete Tab Bar',
   component: AthleteTabBar,
   parameters: { layout: 'centered' },
 }
@@ -21,7 +21,7 @@ export default meta
 
 type Story = StoryObj<typeof AthleteTabBar>
 
-export const Base: Story = {
+export const Default: Story = {
   render: () => {
     const [activeKey, setActiveKey] = useState<AthleteTabKey>('stats')
     return <AthleteTabBar activeKey={activeKey} onChange={setActiveKey} icons={iconSet} />
