@@ -1,0 +1,95 @@
+.ds-progress-bar {
+  position: relative;
+  width: 343px;
+  max-width: 100%;
+  height: 24px;
+}
+
+.ds-progress-bar__track {
+  position: absolute;
+  inset: 4px 0;
+  overflow: hidden;
+  border: 1px solid var(--semantic-color-text-primary);
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #bce7f0 0%,
+    #dff0e7 28%,
+    #ffe9ca 58%,
+    #edf2d7 82%,
+    #e5f4d6 100%
+  );
+}
+
+.ds-progress-bar__pending {
+  position: absolute;
+  inset: 1px 0 1px 0;
+}
+
+.ds-progress-bar__pending-step {
+  position: absolute;
+  top: 0;
+  height: 14px;
+  background: transparent;
+}
+
+.ds-progress-bar__pending-step[data-visible='true'] {
+  background: var(--component-checkbox-box-background-default);
+}
+
+.ds-progress-bar__pending-step[data-edge='start'][data-visible='true'] {
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+}
+
+.ds-progress-bar__pending-step[data-edge='end'][data-visible='true'] {
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+
+.ds-progress-bar__dividers {
+  position: absolute;
+  inset: 1px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  pointer-events: none;
+}
+
+.ds-progress-bar__divider {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 14px;
+  background: var(--component-checkbox-box-background-default);
+  box-shadow:
+    inset 1px 0 0 var(--semantic-color-text-primary),
+    inset -1px 0 0 var(--semantic-color-text-primary);
+}
+
+.ds-progress-bar__marker {
+  position: absolute;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--component-checkbox-box-background-default);
+  border-radius: 999px;
+  background: var(--semantic-color-text-primary);
+  box-sizing: border-box;
+}
+
+.ds-progress-bar__check {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.ds-progress-bar__check path {
+  fill: none;
+  stroke: var(--semantic-color-text-inverse);
+  stroke-width: 2.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

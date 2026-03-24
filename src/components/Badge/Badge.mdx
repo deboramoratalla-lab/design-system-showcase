@@ -1,0 +1,94 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Badge.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page badge-circuit-page badge-docs-layout">
+  <div className="badge-docs-main">
+    <header className="docs-hero badge-docs-hero">
+      <h1 className="docs-title">Badge</h1>
+      <p className="badge-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Badges surface short status and count indicators in compact spaces, such as cards, rows,
+        and notification affordances.
+      </p>
+    </header>
+
+    <section className="badge-docs-section badge-docs-section--intro">
+      <div className="badge-docs-box">
+        <div className="badge-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+      <div className="badge-docs-box badge-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="badge-docs-section">
+      <h2>When to use it</h2>
+      <div className="badge-docs-box">
+        <p>
+          Use badges to communicate concise metadata like unread counts, statuses, or compact
+          value labels without dominating the layout.
+        </p>
+      </div>
+    </section>
+
+    <section className="badge-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="badge-docs-box">
+        <ul className="docs-list">
+          <li>Do keep badge content short, ideally 1 to 4 characters.</li>
+          <li>Do use notification badges for counts and value badges for token-like labels.</li>
+          <li>Do keep visual state consistent with the surrounding container emphasis.</li>
+          <li>Do avoid stacking multiple badges in the same immediate control area.</li>
+          <li>Do use selected/inverse style when badge appears on dark or highlighted surfaces.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="badge-docs-section">
+      <h2>Component variations</h2>
+
+      <article className="badge-docs-variant">
+        <h3>Notification</h3>
+        <div className="badge-docs-box">
+          <p>
+            Circular counters for brief numeric indicators in <code>sm</code> and <code>lg</code>, with
+            <code>default</code> and <code>selected</code> states.
+          </p>
+          <div className="badge-example-window">
+            <Canvas of={Stories.Notification} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="badge-docs-variant">
+        <h3>Value</h3>
+        <div className="badge-docs-box">
+          <p>
+            Rectangular labels for compact metadata chips, also available in both sizes and states.
+          </p>
+          <div className="badge-example-window">
+            <Canvas of={Stories.Value} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="badge-docs-variant">
+        <h3>Matrix</h3>
+        <div className="badge-docs-box">
+          <p>Complete matrix matching the component set from Figma.</p>
+          <div className="badge-example-window">
+            <Canvas of={Stories.Matrix} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="badge-docs-side">
+    <OnThisPageNav storyId="components-primitives-badge--docs" />
+  </aside>
+</div>

@@ -1,0 +1,67 @@
+.ds-toggle-switch {
+  --switch-track-bg: var(--semantic-color-action-primary-default);
+  --switch-thumb-bg: var(--core-color-neutral-white);
+  --switch-track-w: 48px;
+  --switch-track-h: 24px;
+  --switch-thumb-size: 18px;
+  --switch-pad: 3px;
+
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 999px;
+}
+
+.ds-toggle-switch__track {
+  width: var(--switch-track-w);
+  height: var(--switch-track-h);
+  padding: var(--switch-pad);
+  border-radius: 999px;
+  background: var(--switch-track-bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  transition:
+    background-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.ds-toggle-switch__thumb {
+  width: var(--switch-thumb-size);
+  height: var(--switch-thumb-size);
+  border-radius: 999px;
+  background: var(--switch-thumb-bg);
+  display: inline-block;
+}
+
+.ds-toggle-switch[data-checked='true'] {
+  --switch-track-bg: var(--core-color-brand-ice-blue-400);
+}
+
+.ds-toggle-switch[data-checked='true'] .ds-toggle-switch__track {
+  justify-content: flex-end;
+}
+
+.ds-toggle-switch:disabled {
+  --switch-track-bg: var(--core-color-neutral-gray-300);
+  cursor: not-allowed;
+}
+
+.ds-toggle-switch:focus {
+  outline: none;
+}
+
+.ds-toggle-switch:focus-visible .ds-toggle-switch__track,
+.ds-toggle-switch[data-state='focus'] .ds-toggle-switch__track {
+  box-shadow:
+    0 0 0 calc(var(--semantic-color-focus-ring-inner-width) * 1px) var(--semantic-color-focus-ring-inner-color),
+    0 0 0 calc(var(--semantic-color-focus-ring-outer-width) * 1px) var(--semantic-color-focus-ring-outer-color);
+}

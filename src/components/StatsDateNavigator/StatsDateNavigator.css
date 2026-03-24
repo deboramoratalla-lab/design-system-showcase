@@ -1,0 +1,49 @@
+.ds-stats-date-navigator {
+  width: 258px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ds-stats-date-navigator__button {
+  appearance: none;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--semantic-color-border-strong);
+  border-radius: 999px;
+  background: var(--semantic-color-surface-secondary);
+  color: var(--semantic-color-text-primary);
+  cursor: pointer;
+}
+
+.ds-stats-date-navigator__button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ds-stats-date-navigator__copy {
+  display: grid;
+  gap: 2px;
+}
+
+.ds-stats-date-navigator__label,
+.ds-stats-date-navigator__detail {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+}
+
+.ds-stats-date-navigator__label {
+  font-size: calc(var(--core-typography-font-size-18) * 1px);
+  line-height: calc(var(--core-typography-line-height-24) * 1px);
+  font-weight: var(--core-typography-font-weight-medium);
+  color: var(--semantic-color-text-primary);
+}
+
+.ds-stats-date-navigator__detail {
+  font-size: calc(var(--core-typography-font-size-14) * 1px);
+  line-height: calc(var(--core-typography-line-height-20) * 1px);
+  color: var(--semantic-color-text-secondary);
+}

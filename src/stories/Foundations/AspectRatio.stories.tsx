@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import '../Documentation/DocsPages.css'
+import { DocsPager } from '../Documentation/DocsPager'
 
 const ratios = [
   {
@@ -7,7 +8,7 @@ const ratios = [
     usage: 'Profile avatars and compact utility visuals',
     value: '1 / 1',
     frame: '96 x 96',
-    src: '/brand/07-photography-2.svg',
+    src: '/people/profile-dm.jpg',
     fit: 'cover' as const,
   },
   {
@@ -205,17 +206,6 @@ export const AspectRatioSystem: Story = {
       </article>
 
       <article className="docs-card docs-stack">
-        <h3>Vision Board</h3>
-        <div className="docs-vision-grid-preview">
-          {Array.from({ length: 9 }).map((_, index) => (
-            <div key={`tile-${index}`} className="docs-vision-grid-tile">
-              <span>1:1</span>
-            </div>
-          ))}
-        </div>
-      </article>
-
-      <article className="docs-card docs-stack">
         <h3>Tile Transition</h3>
         <div className="docs-ratio-transition">
           <div className="docs-ratio-transition-box is-square">
@@ -229,6 +219,14 @@ export const AspectRatioSystem: Story = {
           </div>
         </div>
       </article>
+    
+
+      <DocsPager
+        prevHref="?path=/story/foundations-focus--focus-system"
+        prevLabel="Foundations / Focus"
+        nextHref="?path=/story/foundations-borders-radius--borders-and-radius"
+        nextLabel="Foundations / Borders & Radius"
+      />
     </section>
   ),
 }

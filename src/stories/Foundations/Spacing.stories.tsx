@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import type { CSSProperties } from 'react'
 import '../Documentation/DocsPages.css'
+import { DocsPager } from '../Documentation/DocsPager'
 import { spacingScale } from './foundationData'
 
 type SpacingPlaygroundArgs = {
@@ -14,7 +15,7 @@ type SpacingPlaygroundArgs = {
 const tokenToValue = new Map(spacingScale.map((item) => [item.token, item.value]))
 const spacingOptions = spacingScale.map((item) => item.token)
 
-const meta: Meta = {
+const meta: Meta<SpacingPlaygroundArgs> = {
   title: 'Foundations/Spacing',
   parameters: { layout: 'fullscreen' },
   argTypes: {
@@ -107,6 +108,13 @@ export const SpacingScale: Story = {
           ))}
         </div>
       </article>
+
+      <DocsPager
+        prevHref="?path=/story/foundations-typography--typography-scale"
+        prevLabel="Foundations / Typography"
+        nextHref="?path=/story/foundations-spacing--interactive-playground"
+        nextLabel="Foundations / Spacing Playground"
+      />
     </section>
   ),
 }
@@ -120,8 +128,8 @@ export const InteractivePlayground: Story = {
     showGuides: true,
   },
   render: ({ gapToken, paddingToken, direction, itemCount, showGuides }) => {
-    const gap = tokenToValue.get(gapToken) ?? 16
-    const padding = tokenToValue.get(paddingToken) ?? 24
+    const gap = tokenToValue.get(gapToken) ?? tokenToValue.get('core.spacing.scale.4') ?? 16
+    const padding = tokenToValue.get(paddingToken) ?? tokenToValue.get('core.spacing.scale.6') ?? 24
     const isVertical = direction === 'vertical'
     const items = Array.from({ length: itemCount }, (_, index) => `Card ${String.fromCharCode(65 + index)}`)
 
@@ -135,25 +143,25 @@ export const InteractivePlayground: Story = {
           </p>
         </header>
 
-        <div className="docs-kpi-grid">
-          <article className="docs-kpi">
-            <span className="docs-kpi-label">Gap Token</span>
-            <span className="docs-kpi-value">{gap}px</span>
+        <div className="docs-kpi-grid docs-spacing-kpi-grid">
+          <article className="docs-kpi docs-spacing-kpi">
+            <span className="docs-kpi-label docs-spacing-kpi-label">Gap Token</span>
+            <span className="docs-kpi-value docs-spacing-kpi-value">{gap}px</span>
             <code>{gapToken}</code>
           </article>
-          <article className="docs-kpi">
-            <span className="docs-kpi-label">Padding Token</span>
-            <span className="docs-kpi-value">{padding}px</span>
+          <article className="docs-kpi docs-spacing-kpi">
+            <span className="docs-kpi-label docs-spacing-kpi-label">Padding Token</span>
+            <span className="docs-kpi-value docs-spacing-kpi-value">{padding}px</span>
             <code>{paddingToken}</code>
           </article>
-          <article className="docs-kpi">
-            <span className="docs-kpi-label">Direction</span>
-            <span className="docs-kpi-value">{isVertical ? 'Stack' : 'Row'}</span>
+          <article className="docs-kpi docs-spacing-kpi">
+            <span className="docs-kpi-label docs-spacing-kpi-label">Direction</span>
+            <span className="docs-kpi-value docs-spacing-kpi-value">{isVertical ? 'Stack' : 'Row'}</span>
             <code>{direction}</code>
           </article>
-          <article className="docs-kpi">
-            <span className="docs-kpi-label">Items</span>
-            <span className="docs-kpi-value">{itemCount}</span>
+          <article className="docs-kpi docs-spacing-kpi">
+            <span className="docs-kpi-label docs-spacing-kpi-label">Items</span>
+            <span className="docs-kpi-value docs-spacing-kpi-value">{itemCount}</span>
             <code>{showGuides ? 'guides:on' : 'guides:off'}</code>
           </article>
         </div>
@@ -212,6 +220,13 @@ export const InteractivePlayground: Story = {
             </div>
           </div>
         </article>
+
+        <DocsPager
+          prevHref="?path=/story/foundations-spacing--spacing-scale"
+          prevLabel="Foundations / Spacing"
+          nextHref="?path=/story/foundations-layout--layout-grids"
+          nextLabel="Foundations / Layout"
+        />
       </section>
     )
   },

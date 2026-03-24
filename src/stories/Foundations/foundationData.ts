@@ -16,7 +16,7 @@ export const primaryPalette: Tone[] = [
   { token: 'core.color.neutral.gray-700', name: 'Neutral 700', hex: '#3E565B' },
   { token: 'core.color.neutral.gray-500', name: 'Neutral 500', hex: '#8FA0A4' },
   { token: 'core.color.neutral.gray-300', name: 'Neutral 300', hex: '#D4DCDD' },
-  { token: 'core.color.neutral.gray-100', name: 'Neutral 100', hex: '#F5F9F9' },
+  { token: 'core.color.neutral.gray-100', name: 'Neutral 100', hex: '#F4F9F9' },
 ]
 
 export const highlightPalette: Tone[] = [
@@ -69,7 +69,7 @@ export const primitiveColorFamilies: ColorFamily[] = [
       { token: 'core.color.brand.egg-orange.300', name: '300', hex: '#FFD6B3' },
       { token: 'core.color.brand.egg-orange.400', name: '400', hex: '#F2A870' },
       { token: 'core.color.brand.egg-orange.500', name: '500', hex: '#C56B33' },
-      { token: 'core.color.brand.egg-orange.600', name: '600', hex: '#763B19' },
+      { token: 'core.color.brand.egg-orange.600', name: '600', hex: '#753B19' },
       { token: 'core.color.brand.egg-orange.700', name: '700', hex: '#5F2F13' },
       { token: 'core.color.brand.egg-orange.800', name: '800', hex: '#47220E' },
       { token: 'core.color.brand.egg-orange.900', name: '900', hex: '#2F1508' },
@@ -85,7 +85,7 @@ export const primitiveColorFamilies: ColorFamily[] = [
       { token: 'core.color.brand.grape-lilac.300', name: '300', hex: '#E9CCFF' },
       { token: 'core.color.brand.grape-lilac.400', name: '400', hex: '#C98BFF' },
       { token: 'core.color.brand.grape-lilac.500', name: '500', hex: '#8C3DDA' },
-      { token: 'core.color.brand.grape-lilac.600', name: '600', hex: '#561DA1' },
+      { token: 'core.color.brand.grape-lilac.600', name: '600', hex: '#561CA0' },
       { token: 'core.color.brand.grape-lilac.700', name: '700', hex: '#471783' },
       { token: 'core.color.brand.grape-lilac.800', name: '800', hex: '#351262' },
       { token: 'core.color.brand.grape-lilac.900', name: '900', hex: '#240C41' },
@@ -100,7 +100,7 @@ export const neutralColorFamily: ColorFamily = {
     { token: 'core.color.neutral.white', name: 'white', hex: '#FFFFFF' },
     { token: 'core.color.neutral.black', name: 'black', hex: '#000000' },
     { token: 'core.color.neutral.gray-50', name: '50', hex: '#F9FAFA' },
-    { token: 'core.color.neutral.gray-100', name: '100', hex: '#F5F9F9' },
+    { token: 'core.color.neutral.gray-100', name: '100', hex: '#F4F9F9' },
     { token: 'core.color.neutral.gray-200', name: '200', hex: '#F1F4F4' },
     { token: 'core.color.neutral.gray-300', name: '300', hex: '#D4DCDD' },
     { token: 'core.color.neutral.gray-400', name: '400', hex: '#B3C2CA' },
@@ -208,7 +208,13 @@ export const borderWidths = [
 ]
 
 export const breakpoints = [
-  { token: 'core.breakpoint.min-width', px: 320, role: 'Small mobile baseline' },
-  { token: 'core.breakpoint.default-width', px: 375, role: 'Default mobile frame' },
-  { token: 'core.breakpoint.max-width', px: 560, role: 'Large mobile / phablet cap' },
+  { token: 'core.breakpoint.min width', px: 320, role: 'Mobile baseline' },
+  { token: 'core.breakpoint.default width', px: 375, role: 'Default mobile frame' },
+  { token: 'core.breakpoint.max width', px: 560, role: 'Mobile maximum width' },
+  { token: 'core.breakpoint.tablet.min width', px: 560, role: 'Tablet baseline' },
+  { token: 'core.breakpoint.tablet.default width', px: 768, role: 'Default tablet frame' },
+  { token: 'core.breakpoint.tablet.max width', px: 960, role: 'Tablet maximum width' },
+  { token: 'core.breakpoint.desktop.min width', px: 960, role: 'Desktop baseline' },
+  { token: 'core.breakpoint.desktop.default width', px: 1200, role: 'Default desktop frame' },
+  { token: 'core.breakpoint.desktop.max width', px: 2000, role: 'Desktop maximum width' },
 ]

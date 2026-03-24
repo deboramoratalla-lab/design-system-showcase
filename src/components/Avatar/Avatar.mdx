@@ -1,0 +1,101 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Avatar.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page avatar-circuit-page avatar-docs-layout">
+  <div className="avatar-docs-main">
+    <header className="docs-hero avatar-docs-hero">
+      <h1 className="docs-title">Avatar</h1>
+      <p
+        className="avatar-description sb-unstyled"
+        style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}
+      >
+        Avatars represent people in compact spaces and help users identify who performed an action
+        or who is speaking in a conversation.
+      </p>
+    </header>
+
+    <section className="avatar-docs-section avatar-docs-section--intro">
+      <div className="avatar-docs-box">
+        <div className="avatar-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+      <div className="avatar-docs-box avatar-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="avatar-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="avatar-docs-box">
+        <ul className="docs-list">
+          <li>Do use avatar when representing a person or a brand in compact UI contexts.</li>
+          <li>Do keep a consistent avatar variant in the same local context.</li>
+          <li>Do use identity avatars for people and object avatars for products, brands, or teams.</li>
+          <li>For academy or player entries, use uploaded photos/logos when available.</li>
+          <li>Do maintain consistent sizing inside the same list, table, or card group.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="avatar-docs-section">
+      <h2>Variants</h2>
+
+      <article className="avatar-docs-variant">
+        <h3>Photo</h3>
+        <div className="avatar-docs-box">
+          <p>
+            Use <code>photo</code> when users upload a personal avatar image.
+          </p>
+          <div className="avatar-example-window">
+            <Canvas of={Stories.ObjectVariant} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="avatar-docs-variant">
+        <h3>Logo</h3>
+        <div className="avatar-docs-box">
+          <p>
+            Use <code>logo</code> for brand or object entries when a logo is uploaded.
+          </p>
+          <div className="avatar-example-window">
+            <Canvas of={Stories.IdentityVariant} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="avatar-docs-variant">
+        <h3>Initials</h3>
+        <div className="avatar-docs-box">
+          <p>
+            Use <code>initials</code> as a person fallback when no photo is available.
+          </p>
+          <div className="avatar-example-window">
+            <Canvas of={Stories.Base} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="avatar-docs-variant">
+        <h3>Sizes</h3>
+        <div className="avatar-docs-box">
+          <p>
+            Avatar supports <code>sm</code>, <code>md</code>, <code>lg</code>, and <code>xl</code>. Keep one size per
+            local grouping for stronger visual rhythm.
+          </p>
+          <div className="avatar-example-window">
+            <Canvas of={Stories.Sizes} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="avatar-docs-side">
+    <OnThisPageNav storyId="components-primitives-avatar--docs" />
+  </aside>
+</div>

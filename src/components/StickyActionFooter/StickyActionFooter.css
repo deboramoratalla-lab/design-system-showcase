@@ -1,0 +1,19 @@
+.ds-sticky-action-footer {
+  width: 343px;
+  max-width: 100%;
+  display: grid;
+  gap: 8px;
+}
+
+.ds-sticky-action-footer__button {
+  width: 100%;
+}
+
+.ds-sticky-action-footer__helper {
+  margin: 0;
+  text-align: center;
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+  font-size: calc(var(--core-typography-font-size-12) * 1px);
+  line-height: calc(var(--core-typography-line-height-16) * 1px);
+  color: var(--semantic-color-text-secondary);
+}

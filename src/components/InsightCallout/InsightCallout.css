@@ -1,0 +1,63 @@
+.ds-insight-callout {
+  width: 342px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--semantic-color-surface-secondary);
+}
+
+.ds-insight-callout[data-tone='positive'] {
+  background: color-mix(in srgb, var(--semantic-color-feedback-success-background) 70%, white);
+}
+
+.ds-insight-callout[data-tone='neutral'] {
+  background: var(--semantic-color-surface-tertiary);
+}
+
+.ds-insight-callout[data-tone='warning'] {
+  background: color-mix(in srgb, var(--semantic-color-feedback-warning-background) 80%, white);
+}
+
+.ds-insight-callout__icon {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--semantic-color-text-primary);
+}
+
+.ds-insight-callout__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.ds-insight-callout__copy {
+  display: grid;
+  gap: 4px;
+}
+
+.ds-insight-callout__title,
+.ds-insight-callout__description {
+  margin: 0;
+}
+
+.ds-insight-callout__title {
+  font-family: var(--core-typography-font-family-primary), 'Gustavo', sans-serif;
+  font-size: calc(var(--core-typography-font-size-20) * 1px);
+  line-height: calc(var(--core-typography-line-height-24) * 1px);
+  color: var(--semantic-color-text-primary);
+}
+
+.ds-insight-callout__description {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+  font-size: calc(var(--core-typography-font-size-14) * 1px);
+  line-height: calc(var(--core-typography-line-height-20) * 1px);
+  color: var(--semantic-color-text-primary);
+}

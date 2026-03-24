@@ -1,0 +1,41 @@
+.ds-segmented-control {
+  display: inline-grid;
+  grid-auto-flow: column;
+  gap: 4px;
+  align-items: center;
+  padding: 4px;
+  border-radius: 999px;
+  background: var(--core-color-neutral-gray-200);
+}
+
+.ds-segmented-control__item {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--semantic-color-text-primary);
+  min-height: 38px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    opacity 150ms ease;
+}
+
+.ds-segmented-control__item[data-selected='true'] {
+  background: var(--semantic-color-action-primary-default);
+  color: var(--semantic-color-text-inverse);
+}
+
+.ds-segmented-control__item:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ds-segmented-control__label {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+  font-size: calc(var(--core-typography-font-size-16) * 1px);
+  line-height: calc(var(--core-typography-line-height-20) * 1px);
+  font-weight: var(--core-typography-font-weight-medium);
+}

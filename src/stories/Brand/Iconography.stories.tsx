@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { iconLibraryManifest } from './iconLibraryManifest'
 import './BrandDocs.css'
+import { DocsPager } from '../Documentation/DocsPager'
 
 const meta: Meta = {
   title: 'Brand/Iconography',
@@ -190,7 +191,15 @@ function IconographyPage() {
           ))}
         </div>
       </section>
-    </div>
+    
+
+      <DocsPager
+        prevHref="?path=/story/brand-typography--typography"
+        prevLabel="Brand / Typography"
+        nextHref="?path=/story/brand-photography--photography"
+        nextLabel="Brand / Photography"
+      />
+</div>
   )
 }
 

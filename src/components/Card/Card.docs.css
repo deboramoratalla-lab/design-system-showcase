@@ -1,0 +1,105 @@
+.card-circuit-page {
+  --card-h2-size: 32px;
+  --card-h2-line: 1.12;
+  --card-h3-size: 24px;
+  --card-h3-line: 32px;
+  --card-body-size: 16px;
+  --card-body-line: 24px;
+
+  padding: 0 !important;
+  max-width: 1080px;
+  margin: 0 auto;
+  gap: clamp(44px, 6vw, 88px);
+  background: #fff;
+}
+
+.card-docs-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  column-gap: 28px;
+  align-items: start;
+}
+
+.card-docs-main {
+  min-width: 0;
+  display: grid;
+  gap: inherit;
+}
+
+.card-docs-side {
+  min-width: 0;
+  position: sticky;
+  top: 104px;
+  align-self: start;
+}
+
+.card-docs-side .on-this-page-inner {
+  position: static;
+  top: auto;
+  min-height: 0;
+}
+
+.card-docs-section,
+.card-docs-variant,
+.card-docs-box {
+  display: grid;
+  gap: 12px;
+}
+
+.card-docs-section {
+  gap: 16px;
+}
+
+.card-docs-box {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.card-docs-box--props {
+  width: 100%;
+}
+
+.card-docs-section > h2,
+.card-docs-variant > h3 {
+  margin: 0;
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.card-docs-box p,
+.card-docs-box .docs-list,
+.card-docs-box .docs-list li {
+  margin: 0;
+  max-width: 72ch;
+}
+
+.card-example-window {
+  position: relative;
+  background: #f9fafa;
+  border: 1px solid color-mix(in srgb, var(--semantic-color-border-subtle) 58%, transparent);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-example-window :is(.docs-story, .sbdocs-preview) {
+  margin: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.card-docs-box :is(.docblock-argstable, .docblock-argstable table) {
+  margin: 0;
+}
+
+@media (max-width: 1120px) {
+  .card-docs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .card-docs-side {
+    display: none;
+  }
+}

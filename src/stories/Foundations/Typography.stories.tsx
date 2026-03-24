@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import '../Documentation/DocsPages.css'
+import { DocsPager } from '../Documentation/DocsPager'
 
 const meta: Meta = {
   title: 'Foundations/Typography',
@@ -255,6 +256,14 @@ export const TypographyScale: Story = {
         </div>
       </article>
 
-    </section>
+    
+
+      <DocsPager
+        prevHref="?path=/story/foundations-color-primitives--color-primitives"
+        prevLabel="Foundations / Color Primitives"
+        nextHref="?path=/story/foundations-spacing--spacing-scale"
+        nextLabel="Foundations / Spacing"
+      />
+</section>
   ),
 }

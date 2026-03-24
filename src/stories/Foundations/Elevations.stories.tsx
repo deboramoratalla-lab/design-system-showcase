@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import '../Documentation/DocsPages.css'
+import { DocsPager } from '../Documentation/DocsPager'
 
 const elevationLevels = [
   {
@@ -142,6 +143,14 @@ export const ElevationSystem: Story = {
           </tbody>
         </table>
       </article>
-    </section>
+    
+
+      <DocsPager
+        prevHref="?path=/story/foundations-layout--layout-grids"
+        prevLabel="Foundations / Layout"
+        nextHref="?path=/story/foundations-focus--focus-system"
+        nextLabel="Foundations / Focus"
+      />
+</section>
   ),
 }

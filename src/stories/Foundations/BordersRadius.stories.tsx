@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import '../Documentation/DocsPages.css'
+import { DocsPager } from '../Documentation/DocsPager'
 import { borderWidths, radiusTokens } from './foundationData'
 
 const meta: Meta = {
@@ -61,6 +62,14 @@ export const BordersAndRadius: Story = {
           ))}
         </article>
       </div>
-    </section>
+    
+
+      <DocsPager
+        prevHref="?path=/story/foundations-aspect-ratio--aspect-ratio-system"
+        prevLabel="Foundations / Aspect Ratio"
+        nextHref="?path=/story/brand-logo--logo-system"
+        nextLabel="Brand / Logo"
+      />
+</section>
   ),
 }

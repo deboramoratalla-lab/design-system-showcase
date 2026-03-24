@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './SegmentedControl.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page segmented-control-circuit-page segmented-control-docs-layout">
+  <div className="segmented-control-docs-main">
+    <header className="docs-hero segmented-control-docs-hero">
+      <h1 className="docs-title">Segmented control</h1>
+      <p className="segmented-control-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Segmented controls let users switch quickly between a small set of related views or scopes in the same context.
+      </p>
+    </header>
+    <section className="segmented-control-docs-section segmented-control-docs-section--intro">
+      <div className="segmented-control-docs-box"><div className="segmented-control-example-window"><Canvas of={Stories.Base} sourceState="hidden" /></div></div>
+      <div className="segmented-control-docs-box segmented-control-docs-box--props"><Controls of={Stories.Base} /></div>
+    </section>
+    <section className="segmented-control-docs-section">
+      <h2>When to use it</h2>
+      <div className="segmented-control-docs-box"><p>Use segmented control when users need to switch between closely related options without leaving the current screen.</p></div>
+    </section>
+    <section className="segmented-control-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="segmented-control-docs-box">
+        <ul className="docs-list">
+          <li>Do keep the number of options small.</li>
+          <li>Do use short labels with parallel structure.</li>
+          <li>Do disable options only when the user can still understand why they exist.</li>
+        </ul>
+      </div>
+    </section>
+    <section className="segmented-control-docs-section">
+      <h2>Component variations</h2>
+      <article className="segmented-control-docs-variant"><h3>Disabled option</h3><div className="segmented-control-docs-box"><div className="segmented-control-example-window"><Canvas of={Stories.DisabledOption} sourceState="hidden" /></div></div></article>
+    </section>
+  </div>
+  <aside className="segmented-control-docs-side"><OnThisPageNav storyId="components-form-controls-segmented-control--docs" /></aside>
+</div>

@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:tokens": "style-dictionary build --config design-tokens/style-dictionary.config.js"
+    "build:tokens": "style-dictionary build --config design-tokens/style-dictionary.config.js",
+    "chromatic": "npx chromatic --project-token=chpt_0cad59fd71b7574"
   },
   "dependencies": {
     "lucide-react": "^0.575.0",
@@ -30,6 +31,7 @@
     "@vitejs/plugin-react": "^5.1.1",
     "@vitest/browser-playwright": "^4.0.18",
     "@vitest/coverage-v8": "^4.0.18",
+    "chromatic": "^15.2.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
@@ -37,6 +39,7 @@
     "globals": "^16.5.0",
     "playwright": "^1.58.2",
     "storybook": "^10.2.11",
+    "storybook-addon-code-editor": "^6.1.3",
     "style-dictionary": "^5.3.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",

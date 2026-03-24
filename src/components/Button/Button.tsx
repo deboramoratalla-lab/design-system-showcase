@@ -1,12 +1,12 @@
 import * as React from 'react'
+import { Spinner } from '../Spinner'
 import './Button.css'
 
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary' | 'danger'
 export type ButtonSize = 'sm' | 'md' | 'lg'
 export type ButtonVisualState = 'default' | 'hover' | 'active' | 'focus'
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant
   size?: ButtonSize
   leadingIcon?: React.ReactNode
@@ -60,26 +60,30 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...rest}
       >
         <span className="ds-button__inner">
-          {loading ? (
-            <span className="ds-button__spinner" aria-hidden />
-          ) : (
-            <>
-              {resolvedLeadingIcon ? (
-                <span className="ds-button__icon" aria-hidden>
-                  {resolvedLeadingIcon}
-                </span>
-              ) : null}
+          {resolvedLeadingIcon ? (
+            <span className="ds-button__icon" aria-hidden>
+              {resolvedLeadingIcon}
+            </span>
+          ) : null}
 
-              {hasLabel ? <span className="ds-button__label">{children}</span> : null}
+          {hasLabel ? <span className="ds-button__label">{children}</span> : null}
 
-              {resolvedTrailingIcon ? (
-                <span className="ds-button__icon" aria-hidden>
-                  {resolvedTrailingIcon}
-                </span>
-              ) : null}
-            </>
-          )}
+          {resolvedTrailingIcon ? (
+            <span className="ds-button__icon" aria-hidden>
+              {resolvedTrailingIcon}
+            </span>
+          ) : null}
         </span>
+
+        {loading ? (
+          <span className="ds-button__spinner-wrap" aria-hidden>
+            <Spinner
+              className="ds-button__spinner"
+              size={size === 'sm' ? 'sm' : 'md'}
+              tone={variant === 'primary' || variant === 'danger' ? 'inverse' : 'default'}
+            />
+          </span>
+        ) : null}
       </button>
     )
   }

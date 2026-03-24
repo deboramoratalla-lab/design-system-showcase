@@ -1,0 +1,188 @@
+.radio-circuit-page {
+  --radio-h2-size: 32px;
+  --radio-h2-line: 1.12;
+  --radio-h3-size: 24px;
+  --radio-h3-line: 32px;
+  --radio-body-size: 16px;
+  --radio-body-line: 24px;
+
+  padding: 0 !important;
+  max-width: 1080px;
+  margin: 0 auto;
+  gap: clamp(44px, 6vw, 88px);
+  background: #fff;
+}
+
+.radio-docs-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  column-gap: 28px;
+  align-items: start;
+}
+
+.radio-docs-main {
+  min-width: 0;
+  display: grid;
+  gap: inherit;
+}
+
+.radio-docs-side {
+  min-width: 0;
+  position: sticky;
+  top: 104px;
+  align-self: start;
+  max-height: calc(100vh - 116px);
+  overflow: auto;
+}
+
+.radio-docs-hero {
+  max-width: 980px;
+}
+
+.radio-docs-hero .docs-title {
+  font-size: 40px !important;
+  line-height: 48px;
+}
+
+.radio-docs-hero > .radio-description {
+  margin: 0;
+  max-width: 72ch;
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif !important;
+  font-size: 19px !important;
+  line-height: 30px !important;
+  font-weight: 400 !important;
+  color: var(--semantic-color-text-primary);
+}
+
+.radio-docs-hero > .radio-description.sb-unstyled {
+  font-size: 19px !important;
+  line-height: 30px !important;
+}
+
+.sbdocs .radio-circuit-page .radio-docs-hero > .radio-description,
+.sbdocs .radio-circuit-page .radio-docs-hero > p.radio-description {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif !important;
+  font-size: 19px !important;
+  line-height: 30px !important;
+  font-weight: 400 !important;
+}
+
+.radio-docs-side .on-this-page-inner {
+  position: static;
+  top: auto;
+  min-height: 0;
+}
+
+.radio-docs-section {
+  display: grid;
+  gap: 16px;
+}
+
+.radio-docs-section > h2 {
+  margin: 0;
+  font-size: var(--radio-h2-size);
+  line-height: var(--radio-h2-line);
+  font-weight: 700;
+  letter-spacing: 0;
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.radio-docs-variant {
+  display: grid;
+  gap: 12px;
+}
+
+.radio-docs-variant > h3,
+.radio-docs-box > h3 {
+  margin: 0;
+  font-size: var(--radio-h3-size);
+  line-height: var(--radio-h3-line);
+  font-weight: 600;
+}
+
+.radio-docs-box {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.radio-docs-box p {
+  margin: 0;
+  font-size: var(--radio-body-size);
+  line-height: var(--radio-body-line);
+  color: var(--semantic-color-text-primary);
+  font-weight: 400;
+  max-width: 72ch;
+}
+
+.radio-docs-box .docs-list {
+  margin: 0;
+  font-size: var(--radio-body-size);
+  line-height: var(--radio-body-line);
+  gap: 6px;
+  font-weight: 400;
+  max-width: 72ch;
+}
+
+.radio-docs-box .docs-list li {
+  font-size: var(--radio-body-size);
+  line-height: var(--radio-body-line);
+  font-weight: 400;
+}
+
+.radio-docs-box strong {
+  font-weight: 500;
+}
+
+.radio-example-window {
+  position: relative;
+  background: #f9fafa;
+  border: 1px solid color-mix(in srgb, var(--semantic-color-border-subtle) 58%, transparent);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.radio-example-window :is(.docs-story, .sbdocs-preview) {
+  margin: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0;
+}
+
+.radio-docs-box :is(.docblock-argstable, .docblock-argstable table) {
+  margin: 0;
+}
+
+.radio-docs-box--props {
+  gap: 10px;
+}
+
+.radio-circuit-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.radio-circuit-column {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+@media (max-width: 1120px) {
+  .radio-docs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .radio-docs-side {
+    display: none;
+  }
+}

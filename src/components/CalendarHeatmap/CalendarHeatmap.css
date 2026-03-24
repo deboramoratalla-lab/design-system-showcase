@@ -1,0 +1,76 @@
+.ds-calendar-heatmap {
+  width: 340px;
+  max-width: 100%;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--semantic-color-surface-secondary);
+}
+
+.ds-calendar-heatmap__header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ds-calendar-heatmap__month,
+.ds-calendar-heatmap__year,
+.ds-calendar-heatmap__weekday,
+.ds-calendar-heatmap__day {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+}
+
+.ds-calendar-heatmap__month,
+.ds-calendar-heatmap__year {
+  font-size: calc(var(--core-typography-font-size-20) * 1px);
+  line-height: calc(var(--core-typography-line-height-24) * 1px);
+  font-weight: var(--core-typography-font-weight-medium);
+  color: var(--semantic-color-text-primary);
+}
+
+.ds-calendar-heatmap__weekday-row,
+.ds-calendar-heatmap__grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ds-calendar-heatmap__weekday {
+  text-align: center;
+  font-size: calc(var(--core-typography-font-size-12) * 1px);
+  line-height: calc(var(--core-typography-line-height-16) * 1px);
+  color: var(--semantic-color-text-secondary);
+}
+
+.ds-calendar-heatmap__day {
+  appearance: none;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  border: 0;
+  border-radius: 12px;
+  background: var(--core-color-neutral-gray-100);
+  color: var(--semantic-color-text-primary);
+  cursor: pointer;
+}
+
+.ds-calendar-heatmap__day[data-state='empty'] {
+  background: var(--core-color-neutral-gray-100);
+}
+
+.ds-calendar-heatmap__day[data-state='partial'] {
+  background: var(--semantic-color-category-orange-background);
+}
+
+.ds-calendar-heatmap__day[data-state='complete'] {
+  background: var(--semantic-color-category-green-background);
+}
+
+.ds-calendar-heatmap__day[data-state='selected'] {
+  background: var(--semantic-color-action-primary-default);
+  color: var(--semantic-color-text-inverse);
+}

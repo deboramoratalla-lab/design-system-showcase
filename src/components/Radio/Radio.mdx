@@ -1,0 +1,84 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Radio.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page radio-circuit-page radio-docs-layout">
+  <div className="radio-docs-main">
+    <header className="docs-hero radio-docs-hero">
+      <h1 className="docs-title">Radio button</h1>
+      <p className="radio-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Radio buttons allow users to select exactly one option from a list of mutually exclusive options.
+      </p>
+    </header>
+
+    <section className="radio-docs-section radio-docs-section--intro">
+      <div className="radio-docs-box">
+        <div className="radio-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+      <div className="radio-docs-box radio-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="radio-docs-section">
+      <h2>When to use it</h2>
+      <div className="radio-docs-box">
+        <p>
+          Use radio buttons when users must choose a single value from a short list, and all options
+          should remain visible for quick comparison.
+        </p>
+      </div>
+    </section>
+
+    <section className="radio-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="radio-docs-box">
+        <ul className="docs-list">
+          <li>Do keep options mutually exclusive and provide clear labels.</li>
+          <li>Do preselect a sensible default when one option is recommended.</li>
+          <li>Do place radio buttons in vertical groups for better scannability.</li>
+          <li>Do use <code>disabled</code> only when the option is truly unavailable.</li>
+          <li>Do provide helper text when the choice has important consequences.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="radio-docs-section">
+      <h2>Component variations</h2>
+
+      <article className="radio-docs-variant">
+        <h3>States</h3>
+        <div className="radio-docs-box">
+          <p>
+            Supports <code>enabled</code>, <code>hovered</code>, <code>focused</code>, and <code>disabled</code>,
+            each with checked and unchecked visuals.
+          </p>
+          <div className="radio-example-window">
+            <Canvas of={Stories.States} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="radio-docs-variant">
+        <h3>Sizes</h3>
+        <div className="radio-docs-box">
+          <p>
+            The component supports <code>sm</code>, <code>md</code>, and <code>lg</code> sizes. Keep size
+            consistent within the same option group.
+          </p>
+          <div className="radio-example-window">
+            <Canvas of={Stories.Sizes} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="radio-docs-side">
+    <OnThisPageNav storyId="components-primitives-radio--docs" />
+  </aside>
+</div>

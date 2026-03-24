@@ -1,0 +1,205 @@
+.list-item-circuit-page {
+  --list-item-h2-size: 32px;
+  --list-item-h2-line: 1.12;
+  --list-item-h3-size: 24px;
+  --list-item-h3-line: 32px;
+  --list-item-body-size: 16px;
+  --list-item-body-line: 24px;
+
+  padding: 0 !important;
+  max-width: 1080px;
+  margin: 0 auto;
+  gap: clamp(44px, 6vw, 88px);
+  background: #fff;
+}
+
+.list-item-docs-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  column-gap: 28px;
+  align-items: start;
+}
+
+.list-item-docs-main {
+  min-width: 0;
+  display: grid;
+  gap: inherit;
+}
+
+.list-item-docs-side {
+  min-width: 0;
+  position: sticky;
+  top: 104px;
+  align-self: start;
+  max-height: calc(100vh - 116px);
+  overflow: auto;
+}
+
+.list-item-docs-hero {
+  max-width: 980px;
+}
+
+.list-item-docs-hero .docs-title {
+  font-size: 40px !important;
+  line-height: 48px;
+}
+
+.list-item-docs-hero > .list-item-description {
+  margin: 0;
+  max-width: 72ch;
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif !important;
+  font-size: 19px !important;
+  line-height: 30px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0;
+  color: var(--semantic-color-text-primary);
+}
+
+.list-item-docs-hero > .list-item-description.sb-unstyled {
+  font-size: 19px !important;
+  line-height: 30px !important;
+}
+
+.sbdocs .list-item-circuit-page .list-item-docs-hero > .list-item-description,
+.sbdocs .list-item-circuit-page .list-item-docs-hero > p.list-item-description {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif !important;
+  font-size: 19px !important;
+  line-height: 30px !important;
+  font-weight: 400 !important;
+}
+
+.list-item-docs-side .on-this-page-inner {
+  position: static;
+  top: auto;
+  min-height: 0;
+}
+
+.list-item-docs-section {
+  display: grid;
+  gap: 16px;
+}
+
+.list-item-docs-section > h2 {
+  margin: 0;
+  font-size: var(--list-item-h2-size);
+  line-height: var(--list-item-h2-line);
+  font-weight: 700;
+  letter-spacing: 0;
+  border-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.list-item-docs-variant {
+  display: grid;
+  gap: 12px;
+}
+
+.list-item-docs-variant > h3,
+.list-item-docs-box > h3 {
+  margin: 0;
+  font-size: var(--list-item-h3-size);
+  line-height: var(--list-item-h3-line);
+  font-weight: 600;
+}
+
+.list-item-docs-box {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: #fff;
+}
+
+.list-item-docs-box p {
+  margin: 0;
+  font-size: var(--list-item-body-size);
+  line-height: var(--list-item-body-line);
+  color: var(--semantic-color-text-primary);
+  font-weight: 400;
+  max-width: 72ch;
+}
+
+.list-item-docs-box .docs-list {
+  margin: 0;
+  font-size: var(--list-item-body-size);
+  line-height: var(--list-item-body-line);
+  gap: 6px;
+  font-weight: 400;
+  max-width: 72ch;
+}
+
+.list-item-docs-box .docs-list li {
+  font-size: var(--list-item-body-size);
+  line-height: var(--list-item-body-line);
+  font-weight: 400;
+}
+
+.list-item-docs-box strong {
+  font-weight: 500;
+}
+
+.list-item-example-window {
+  position: relative;
+  background: #f9fafa;
+  border: 1px solid color-mix(in srgb, var(--semantic-color-border-subtle) 58%, transparent);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.list-item-example-window :is(.docs-story, .sbdocs-preview) {
+  margin: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  border-radius: 0;
+}
+
+.list-item-docs-box :is(.docblock-argstable, .docblock-argstable table) {
+  margin: 0;
+}
+
+.list-item-docs-box--props {
+  gap: 10px;
+}
+
+.list-item-circuit-column {
+  display: grid;
+  gap: 12px;
+  padding: 20px;
+}
+
+.list-item-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(343px, 1fr));
+  justify-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.list-item-matrix__column {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  width: 100%;
+  max-width: 343px;
+}
+
+.list-item-matrix .ds-list-item {
+  width: 100%;
+}
+
+@media (max-width: 1120px) {
+  .list-item-docs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .list-item-docs-side {
+    display: none;
+  }
+
+  .list-item-matrix {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

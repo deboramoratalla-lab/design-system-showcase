@@ -1,0 +1,85 @@
+.ds-radio {
+  --radio-size: calc(var(--component-radio-size-md) * 1px);
+  --radio-border-width: calc(var(--component-radio-border-width) * 1px);
+  --radio-border-color: var(--component-radio-color-unchecked-border);
+  --radio-bg: var(--component-radio-color-unchecked-background);
+  --radio-dot-color: var(--component-radio-color-checked-dot);
+
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--radio-size);
+  height: var(--radio-size);
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    box-shadow 150ms ease,
+    opacity 150ms ease;
+}
+
+.ds-radio[data-size='sm'] {
+  --radio-size: calc(var(--component-radio-size-sm) * 1px);
+}
+
+.ds-radio[data-size='md'] {
+  --radio-size: calc(var(--component-radio-size-md) * 1px);
+}
+
+.ds-radio[data-size='lg'] {
+  --radio-size: calc(var(--component-radio-size-lg) * 1px);
+}
+
+.ds-radio__control {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--radio-size);
+  height: var(--radio-size);
+  border-radius: 999px;
+  border: var(--radio-border-width) solid var(--radio-border-color);
+  background: var(--radio-bg);
+  box-sizing: border-box;
+}
+
+.ds-radio__dot {
+  width: 50%;
+  height: 50%;
+  border-radius: 999px;
+  background: var(--radio-dot-color);
+  opacity: 0;
+}
+
+.ds-radio[data-checked='true'] {
+  --radio-border-color: var(--component-radio-color-checked-border);
+  --radio-bg: var(--component-radio-color-checked-background);
+}
+
+.ds-radio[data-checked='true'] .ds-radio__dot {
+  opacity: 1;
+}
+
+.ds-radio:disabled,
+.ds-radio[data-state='disabled'] {
+  --radio-border-color: var(--component-radio-color-disabled-border);
+  --radio-bg: var(--component-radio-color-disabled-background);
+  --radio-dot-color: var(--component-radio-color-disabled-dot);
+  cursor: not-allowed;
+}
+
+.ds-radio:focus {
+  outline: none;
+}
+
+.ds-radio:focus-visible:not(:disabled),
+.ds-radio[data-state='focused']:not(:disabled) {
+  box-shadow:
+    0 0 0 calc(var(--semantic-color-focus-ring-inner-width) * 1px) var(--semantic-color-focus-ring-inner-color),
+    0 0 0 calc(var(--semantic-color-focus-ring-outer-width) * 1px) var(--semantic-color-focus-ring-outer-color);
+}

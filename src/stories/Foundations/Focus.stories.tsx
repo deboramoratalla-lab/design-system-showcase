@@ -1,5 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import '../Documentation/DocsPages.css'
+import { DocsPager } from '../Documentation/DocsPager'
+import { Button } from '../../components/Button'
 
 const focusTokens = [
   { token: 'semantic.color.focus.ring.inner-color', css: '--semantic-color-focus-ring-inner-color', value: '#F9FAFA' },
@@ -54,11 +56,19 @@ export const FocusSystem: Story = {
       <article className="docs-card docs-stack">
         <h3>Preview</h3>
         <div className="docs-focus-preview">
-          <button className="docs-focus-button is-default" type="button">Button default</button>
-          <button className="docs-focus-button is-focused" type="button">Button focused</button>
-          <button className="docs-focus-button is-focused-secondary" type="button">Secondary focused</button>
+          <Button variant="primary" visualState="default">Button default</Button>
+          <Button variant="primary" visualState="focus">Button focused</Button>
+          <Button variant="secondary" visualState="focus">Secondary focused</Button>
         </div>
       </article>
-    </section>
+    
+
+      <DocsPager
+        prevHref="?path=/story/foundations-elevations--elevation-system"
+        prevLabel="Foundations / Elevations"
+        nextHref="?path=/story/foundations-aspect-ratio--aspect-ratio-system"
+        nextLabel="Foundations / Aspect Ratio"
+      />
+</section>
   ),
 }

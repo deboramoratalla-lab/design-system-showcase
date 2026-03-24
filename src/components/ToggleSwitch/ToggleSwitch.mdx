@@ -1,0 +1,83 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './ToggleSwitch.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page toggle-switch-circuit-page toggle-switch-docs-layout">
+  <div className="toggle-switch-docs-main">
+    <header className="docs-hero toggle-switch-docs-hero">
+      <h1 className="docs-title">Toggle switch</h1>
+      <p className="toggle-switch-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Toggle switches let users turn a setting on or off with immediate effect.
+      </p>
+    </header>
+
+    <section className="toggle-switch-docs-section toggle-switch-docs-section--intro">
+      <div className="toggle-switch-docs-box">
+        <div className="toggle-switch-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+      <div className="toggle-switch-docs-box toggle-switch-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="toggle-switch-docs-section">
+      <h2>When to use it</h2>
+      <div className="toggle-switch-docs-box">
+        <p>
+          Use toggle switch for binary preferences that can be changed instantly, such as notifications,
+          dark mode, or feature flags.
+        </p>
+      </div>
+    </section>
+
+    <section className="toggle-switch-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="toggle-switch-docs-box">
+        <ul className="docs-list">
+          <li>Do pair each switch with a clear text label describing the controlled setting.</li>
+          <li>Do use switch only for immediate on/off effects, not for deferred form submissions.</li>
+          <li>Do keep labels positive and specific (for example: <code>Enable email alerts</code>).</li>
+          <li>Do provide disabled state only when the option is unavailable due to context.</li>
+          <li>Do preserve focus-visible ring for keyboard accessibility.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="toggle-switch-docs-section">
+      <h2>Component variations</h2>
+
+      <article className="toggle-switch-docs-variant">
+        <h3>States</h3>
+        <div className="toggle-switch-docs-box">
+          <p>
+            Supports the full state set shown in Figma: <code>off</code>, <code>on</code>,
+            <code>focus</code>, and <code>disabled</code>.
+          </p>
+          <div className="toggle-switch-example-window">
+            <Canvas of={Stories.States} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="toggle-switch-docs-variant">
+        <h3>In form rows</h3>
+        <div className="toggle-switch-docs-box">
+          <p>
+            Use with a single setting label and enough horizontal space to avoid ambiguous associations.
+          </p>
+          <div className="toggle-switch-example-window">
+            <Canvas of={Stories.InFormRow} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="toggle-switch-docs-side">
+    <OnThisPageNav storyId="components-primitives-toggle-switch--docs" />
+  </aside>
+</div>

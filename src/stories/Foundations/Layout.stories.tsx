@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import type { CSSProperties } from 'react'
 import '../Documentation/DocsPages.css'
-import { spacingScale } from './foundationData'
+import { DocsPager } from '../Documentation/DocsPager'
+import { breakpoints, spacingScale } from './foundationData'
 
 type LayoutArgs = {
   columns: 4 | 6
@@ -29,7 +30,7 @@ const meta: Meta<LayoutArgs> = {
 export default meta
 type Story = StoryObj<LayoutArgs>
 
-export const MobileGrid: Story = {
+export const LayoutGrids: Story = {
   args: {
     columns: 4,
     marginToken: 'core.spacing.scale.4',
@@ -108,6 +109,47 @@ export const MobileGrid: Story = {
             </div>
           </div>
         </article>
+
+        <article className="docs-card docs-stack">
+          <h3>Breakpoint Tokens</h3>
+          <table className="docs-table">
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Width</th>
+                <th>Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {breakpoints.map((breakpoint) => (
+                <tr key={breakpoint.token}>
+                  <td><code>{breakpoint.token}</code></td>
+                  <td>{breakpoint.px}px</td>
+                  <td>{breakpoint.role}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </article>
+
+        <article className="docs-card docs-stack">
+          <h3>Layout Defaults</h3>
+          <div className="docs-demo-line">
+            <span className="docs-demo-name">Page margin</span>
+            <span className="docs-token">core.spacing.layout.page-margin = 16px</span>
+          </div>
+          <div className="docs-demo-line">
+            <span className="docs-demo-name">Gutter</span>
+            <span className="docs-token">core.spacing.layout.gutter = 24px</span>
+          </div>
+        </article>
+
+        <DocsPager
+          prevHref="?path=/story/foundations-spacing--interactive-playground"
+          prevLabel="Foundations / Spacing Playground"
+          nextHref="?path=/story/foundations-elevations--elevation-system"
+          nextLabel="Foundations / Elevations"
+        />
       </section>
     )
   },

@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './PromoCard.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page promo-card-circuit-page promo-card-docs-layout">
+  <div className="promo-card-docs-main">
+    <header className="docs-hero promo-card-docs-hero">
+      <h1 className="docs-title">Promo card</h1>
+      <p className="promo-card-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Promo cards surface a single highlighted action or destination with a strong visual hook and compact supporting copy.
+      </p>
+    </header>
+    <section className="promo-card-docs-section promo-card-docs-section--intro">
+      <div className="promo-card-docs-box"><div className="promo-card-example-window"><Canvas of={Stories.Base} sourceState="hidden" /></div></div>
+      <div className="promo-card-docs-box promo-card-docs-box--props"><Controls of={Stories.Base} /></div>
+    </section>
+    <section className="promo-card-docs-section">
+      <h2>When to use it</h2>
+      <div className="promo-card-docs-box"><p>Use promo cards to spotlight one featured program, collection, or next-step experience without overwhelming the screen.</p></div>
+    </section>
+    <section className="promo-card-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="promo-card-docs-box">
+        <ul className="docs-list">
+          <li>Do keep the title short and immediately scannable.</li>
+          <li>Do use imagery only when it reinforces the content, not as decoration alone.</li>
+          <li>Do reserve promo cards for featured content rather than dense lists of actions.</li>
+        </ul>
+      </div>
+    </section>
+    <section className="promo-card-docs-section">
+      <h2>Component variations</h2>
+      <article className="promo-card-docs-variant"><h3>With image</h3><div className="promo-card-docs-box"><div className="promo-card-example-window"><Canvas of={Stories.WithImage} sourceState="hidden" /></div></div></article>
+    </section>
+  </div>
+  <aside className="promo-card-docs-side"><OnThisPageNav storyId="components-patterns-promo-card--docs" /></aside>
+</div>

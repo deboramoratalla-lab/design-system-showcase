@@ -1,7 +1,7 @@
 import StyleDictionary from "style-dictionary";
 
 export default {
-  source: ["design-tokens/tokens-core-semantic-button.json"],
+  source: ["design-tokens/tokens.json"],
   platforms: {
     css: {
       transformGroup: "css",

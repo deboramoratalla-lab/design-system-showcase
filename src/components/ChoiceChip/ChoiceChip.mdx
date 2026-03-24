@@ -1,0 +1,40 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './ChoiceChip.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page choice-chip-circuit-page choice-chip-docs-layout">
+  <div className="choice-chip-docs-main">
+    <header className="docs-hero choice-chip-docs-hero">
+      <h1 className="docs-title">Choice chip</h1>
+      <p className="choice-chip-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Choice chips let users make quick lightweight selections in compact groups, especially for mood, category, or tag-like answers.
+      </p>
+    </header>
+    <section className="choice-chip-docs-section choice-chip-docs-section--intro">
+      <div className="choice-chip-docs-box"><div className="choice-chip-example-window"><Canvas of={Stories.Base} sourceState="hidden" /></div></div>
+      <div className="choice-chip-docs-box choice-chip-docs-box--props"><Controls of={Stories.Base} /></div>
+    </section>
+    <section className="choice-chip-docs-section">
+      <h2>When to use it</h2>
+      <div className="choice-chip-docs-box"><p>Use choice chips for quick tap targets when options should feel lighter and more flexible than radio cards or segmented controls.</p></div>
+    </section>
+    <section className="choice-chip-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="choice-chip-docs-box">
+        <ul className="docs-list">
+          <li>Do keep chip labels short.</li>
+          <li>Do use icons only when they reinforce the meaning.</li>
+          <li>Do group chips with clear section context so users understand the selection model.</li>
+        </ul>
+      </div>
+    </section>
+    <section className="choice-chip-docs-section">
+      <h2>Component variations</h2>
+      <article className="choice-chip-docs-variant"><h3>States</h3><div className="choice-chip-docs-box"><div className="choice-chip-example-window"><Canvas of={Stories.States} sourceState="hidden" /></div></div></article>
+      <article className="choice-chip-docs-variant"><h3>With icons</h3><div className="choice-chip-docs-box"><div className="choice-chip-example-window"><Canvas of={Stories.WithIcons} sourceState="hidden" /></div></div></article>
+    </section>
+  </div>
+  <aside className="choice-chip-docs-side"><OnThisPageNav storyId="components-form-controls-choice-chip--docs" /></aside>
+</div>

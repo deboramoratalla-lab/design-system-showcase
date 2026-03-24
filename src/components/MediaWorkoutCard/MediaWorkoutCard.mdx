@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './MediaWorkoutCard.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page media-workout-card-circuit-page media-workout-card-docs-layout">
+  <div className="media-workout-card-docs-main">
+    <header className="docs-hero media-workout-card-docs-hero">
+      <h1 className="docs-title">Media workout card</h1>
+      <p className="media-workout-card-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Media workout cards frame one guided exercise, combining context, media preview, status, and a clear start action.
+      </p>
+    </header>
+    <section className="media-workout-card-docs-section media-workout-card-docs-section--intro">
+      <div className="media-workout-card-docs-box"><div className="media-workout-card-example-window"><Canvas of={Stories.Base} sourceState="hidden" /></div></div>
+      <div className="media-workout-card-docs-box media-workout-card-docs-box--props"><Controls of={Stories.Base} /></div>
+    </section>
+    <section className="media-workout-card-docs-section">
+      <h2>When to use it</h2>
+      <div className="media-workout-card-docs-box"><p>Use media workout cards when the user is about to launch a guided video, audio, or focused training exercise.</p></div>
+    </section>
+    <section className="media-workout-card-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="media-workout-card-docs-box">
+        <ul className="docs-list">
+          <li>Do keep the body copy concise and motivating.</li>
+          <li>Do make the CTA explicit about the action that starts the exercise.</li>
+          <li>Do use the status label only when it helps users understand readiness or progress.</li>
+        </ul>
+      </div>
+    </section>
+    <section className="media-workout-card-docs-section">
+      <h2>Component variations</h2>
+      <article className="media-workout-card-docs-variant"><h3>With image</h3><div className="media-workout-card-docs-box"><div className="media-workout-card-example-window"><Canvas of={Stories.WithImage} sourceState="hidden" /></div></div></article>
+    </section>
+  </div>
+  <aside className="media-workout-card-docs-side"><OnThisPageNav storyId="components-patterns-media-workout-card--docs" /></aside>
+</div>

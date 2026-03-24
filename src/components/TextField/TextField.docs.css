@@ -1,0 +1,12 @@
+.text-field-circuit-page{padding:0!important;max-width:1080px;margin:0 auto;gap:clamp(44px,6vw,88px);background:#fff}
+.text-field-docs-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;column-gap:28px;align-items:start}
+.text-field-docs-main{min-width:0;display:grid;gap:inherit}
+.text-field-docs-side{min-width:0;position:sticky;top:104px;align-self:start}
+.text-field-docs-side .on-this-page-inner{position:static;top:auto;min-height:0}
+.text-field-docs-section,.text-field-docs-variant,.text-field-docs-box{display:grid;gap:12px}
+.text-field-docs-section{gap:16px}
+.text-field-docs-section>h2,.text-field-docs-variant>h3{margin:0;border-bottom:0!important;padding-bottom:0!important}
+.text-field-docs-box p,.text-field-docs-box .docs-list,.text-field-docs-box .docs-list li{margin:0;max-width:72ch}
+.text-field-example-window{position:relative;background:#f9fafa;border:1px solid color-mix(in srgb,var(--semantic-color-border-subtle) 58%,transparent);border-radius:12px;overflow:hidden}
+.text-field-example-window :is(.docs-story,.sbdocs-preview){margin:0;border:0!important;box-shadow:none!important;background:transparent!important}
+@media (max-width:1120px){.text-field-docs-layout{grid-template-columns:1fr}.text-field-docs-side{display:none}}

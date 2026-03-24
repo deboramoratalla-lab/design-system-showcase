@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import '../Documentation/DocsPages.css'
+import { DocsPager } from '../Documentation/DocsPager'
 import {
   feedbackColorFamilies,
   neutralColorFamily,
@@ -8,7 +9,8 @@ import {
 } from './foundationData'
 
 const meta: Meta = {
-  title: 'Foundations/Color/Primitives',
+  title: 'Foundations/Color',
+  id: 'foundations-color-primitives',
   parameters: { layout: 'fullscreen' },
 }
 
@@ -82,6 +84,14 @@ export const ColorPrimitives: Story = {
           <PrimitiveFamilyColumn family={family} key={family.family} />
         ))}
       </div>
-    </section>
+    
+
+      <DocsPager
+        prevHref="?path=/story/foundations-design-tokens--token-index"
+        prevLabel="Foundations / Design Tokens"
+        nextHref="?path=/story/foundations-typography--typography-scale"
+        nextLabel="Foundations / Typography"
+      />
+</section>
   ),
 }

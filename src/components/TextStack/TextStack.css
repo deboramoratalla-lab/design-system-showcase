@@ -1,0 +1,17 @@
+.ds-text-stack {
+  min-width: 0;
+  display: grid;
+}
+
+.ds-text-stack[data-gap='xs'] {
+  gap: 2px;
+}
+
+.ds-text-stack[data-gap='sm'] {
+  gap: 4px;
+}
+
+.ds-text-stack__title,
+.ds-text-stack__subtitle {
+  min-width: 0;
+}

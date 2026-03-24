@@ -1,0 +1,71 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Spinner.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page spinner-circuit-page spinner-docs-layout">
+  <div className="spinner-docs-main">
+    <header className="docs-hero spinner-docs-hero">
+      <h1 className="docs-title">Spinner</h1>
+      <p className="spinner-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Spinners indicate background activity when the user needs feedback that something is loading, saving, or refreshing.
+      </p>
+    </header>
+
+    <section className="spinner-docs-section spinner-docs-section--intro">
+      <div className="spinner-docs-box">
+        <div className="spinner-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+      <div className="spinner-docs-box spinner-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="spinner-docs-section">
+      <h2>When to use it</h2>
+      <div className="spinner-docs-box">
+        <p>Use a spinner when the system is busy and the user cannot yet continue, especially for short-lived loading states.</p>
+      </div>
+    </section>
+
+    <section className="spinner-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="spinner-docs-box">
+        <ul className="docs-list">
+          <li>Do pair spinners with a text label when the loading state lasts more than a moment.</li>
+          <li>Do use the smallest size that remains readable in the context.</li>
+          <li>Do not use a spinner when progress can be expressed more precisely with a progress bar.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="spinner-docs-section">
+      <h2>Component variations</h2>
+
+      <article className="spinner-docs-variant">
+        <h3>Sizes</h3>
+        <div className="spinner-docs-box">
+          <div className="spinner-example-window">
+            <Canvas of={Stories.Sizes} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="spinner-docs-variant">
+        <h3>Tones</h3>
+        <div className="spinner-docs-box">
+          <div className="spinner-example-window">
+            <Canvas of={Stories.Tones} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="spinner-docs-side">
+    <OnThisPageNav storyId="components-primitives-spinner--docs" />
+  </aside>
+</div>

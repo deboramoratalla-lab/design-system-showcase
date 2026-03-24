@@ -1,0 +1,12 @@
+.choice-chip-group-circuit-page{padding:0!important;max-width:1080px;margin:0 auto;gap:clamp(44px,6vw,88px);background:#fff}
+.choice-chip-group-docs-layout{display:grid;grid-template-columns:minmax(0,1fr) 220px;column-gap:28px;align-items:start}
+.choice-chip-group-docs-main{min-width:0;display:grid;gap:inherit}
+.choice-chip-group-docs-side{min-width:0;position:sticky;top:104px;align-self:start}
+.choice-chip-group-docs-side .on-this-page-inner{position:static;top:auto;min-height:0}
+.choice-chip-group-docs-section,.choice-chip-group-docs-variant,.choice-chip-group-docs-box{display:grid;gap:12px}
+.choice-chip-group-docs-section{gap:16px}
+.choice-chip-group-docs-section>h2,.choice-chip-group-docs-variant>h3{margin:0;border-bottom:0!important;padding-bottom:0!important}
+.choice-chip-group-docs-box p,.choice-chip-group-docs-box .docs-list,.choice-chip-group-docs-box .docs-list li{margin:0;max-width:72ch}
+.choice-chip-group-example-window{position:relative;background:#f9fafa;border:1px solid color-mix(in srgb,var(--semantic-color-border-subtle) 58%,transparent);border-radius:12px;overflow:hidden}
+.choice-chip-group-example-window :is(.docs-story,.sbdocs-preview){margin:0;border:0!important;box-shadow:none!important;background:transparent!important}
+@media (max-width:1120px){.choice-chip-group-docs-layout{grid-template-columns:1fr}.choice-chip-group-docs-side{display:none}}

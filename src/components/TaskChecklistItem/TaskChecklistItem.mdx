@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './TaskChecklistItem.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page task-checklist-item-circuit-page task-checklist-item-docs-layout">
+  <div className="task-checklist-item-docs-main">
+    <header className="docs-hero task-checklist-item-docs-hero">
+      <h1 className="docs-title">Task checklist item</h1>
+      <p className="task-checklist-item-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Task checklist items present one actionable task with optional time context and a fast completion toggle.
+      </p>
+    </header>
+    <section className="task-checklist-item-docs-section task-checklist-item-docs-section--intro">
+      <div className="task-checklist-item-docs-box"><div className="task-checklist-item-example-window"><Canvas of={Stories.Base} sourceState="hidden" /></div></div>
+      <div className="task-checklist-item-docs-box task-checklist-item-docs-box--props"><Controls of={Stories.Base} /></div>
+    </section>
+    <section className="task-checklist-item-docs-section">
+      <h2>When to use it</h2>
+      <div className="task-checklist-item-docs-box"><p>Use task checklist items in lightweight plans, routines, and personal check-ins where completion needs to feel fast and motivating.</p></div>
+    </section>
+    <section className="task-checklist-item-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="task-checklist-item-docs-box">
+        <ul className="docs-list">
+          <li>Do keep each task focused on one action.</li>
+          <li>Do include time only when it adds prioritization or scheduling value.</li>
+          <li>Do use checklist items for short actionable steps, not dense descriptive content.</li>
+        </ul>
+      </div>
+    </section>
+    <section className="task-checklist-item-docs-section">
+      <h2>Component variations</h2>
+      <article className="task-checklist-item-docs-variant"><h3>Matrix</h3><div className="task-checklist-item-docs-box"><div className="task-checklist-item-example-window"><Canvas of={Stories.Matrix} sourceState="hidden" /></div></div></article>
+    </section>
+  </div>
+  <aside className="task-checklist-item-docs-side"><OnThisPageNav storyId="components-patterns-task-checklist-item--docs" /></aside>
+</div>

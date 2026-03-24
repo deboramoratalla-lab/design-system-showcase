@@ -1,0 +1,50 @@
+.ds-status-tag {
+  --status-tag-bg: var(--core-color-brand-ice-blue-200);
+  --status-tag-fg: var(--core-color-brand-ice-blue-600);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 18px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: var(--status-tag-bg);
+  color: var(--status-tag-fg);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.ds-status-tag[data-tone='blue'] {
+  --status-tag-bg: var(--core-color-brand-ice-blue-200);
+  --status-tag-fg: var(--core-color-brand-ice-blue-600);
+}
+
+.ds-status-tag[data-tone='green'] {
+  --status-tag-bg: var(--core-color-brand-avocado-green-200);
+  --status-tag-fg: var(--core-color-brand-avocado-green-600);
+}
+
+.ds-status-tag[data-tone='orange'] {
+  --status-tag-bg: var(--core-color-brand-egg-orange-200);
+  --status-tag-fg: var(--core-color-brand-egg-orange-600);
+}
+
+.ds-status-tag[data-tone='lilac'] {
+  --status-tag-bg: var(--core-color-brand-grape-lilac-200);
+  --status-tag-fg: var(--core-color-brand-grape-lilac-600);
+}
+
+.ds-status-tag[data-tone='neutral'] {
+  --status-tag-bg: var(--semantic-color-surface-secondary);
+  --status-tag-fg: var(--core-color-neutral-gray-700);
+}
+
+.ds-status-tag__label {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+  font-size: calc(var(--core-typography-font-size-10) * 1px);
+  line-height: calc(var(--core-typography-line-height-14) * 1px);
+  font-weight: var(--core-typography-font-weight-bold);
+  letter-spacing: calc(var(--core-typography-letter-spacing-0) * 1px);
+  color: inherit;
+}

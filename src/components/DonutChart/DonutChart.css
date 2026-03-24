@@ -1,0 +1,34 @@
+.ds-donut-chart {
+  --donut-size: 132px;
+  --donut-hole: 54px;
+
+  width: var(--donut-size);
+  height: var(--donut-size);
+  position: relative;
+}
+
+.ds-donut-chart[data-size='sm'] {
+  --donut-size: 112px;
+  --donut-hole: 44px;
+}
+
+.ds-donut-chart[data-size='md'] {
+  --donut-size: 132px;
+  --donut-hole: 54px;
+}
+
+.ds-donut-chart__ring {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--donut-gradient);
+}
+
+.ds-donut-chart__ring::after {
+  content: '';
+  position: absolute;
+  inset: var(--donut-hole);
+  border-radius: 50%;
+  background: var(--semantic-color-surface-secondary);
+}

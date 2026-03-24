@@ -1,0 +1,75 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Card.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page card-circuit-page card-docs-layout">
+  <div className="card-docs-main">
+    <header className="docs-hero card-docs-hero">
+      <h1 className="docs-title">Card</h1>
+      <p className="card-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Card is a neutral surface primitive for grouping related content and building richer patterns without baking in product-specific structure.
+      </p>
+    </header>
+
+    <section className="card-docs-section card-docs-section--intro">
+      <div className="card-docs-box">
+        <div className="card-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+    </section>
+
+    <section className="card-docs-section card-docs-section--props">
+      <div className="card-docs-box card-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="card-docs-section">
+      <h2>When to use it</h2>
+      <div className="card-docs-box">
+        <p>Use card as a reusable container when content needs a shared surface, spacing, and optional interactive affordance.</p>
+      </div>
+    </section>
+
+    <section className="card-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="card-docs-box">
+        <ul className="docs-list">
+          <li>Do keep card visually neutral so product patterns can define hierarchy inside it.</li>
+          <li>Do use <code>interactive</code> only when the whole surface behaves as a click target.</li>
+          <li>Do choose the lightest variant that still creates enough separation from the background.</li>
+          <li>Do not rely on card styling alone to communicate priority or status.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="card-docs-section">
+      <h2>Component variations</h2>
+
+      <article className="card-docs-variant">
+        <h3>Base</h3>
+        <div className="card-docs-box">
+          <div className="card-example-window">
+            <Canvas of={Stories.Base} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="card-docs-variant">
+        <h3>Interactive</h3>
+        <div className="card-docs-box">
+          <div className="card-example-window">
+            <Canvas of={Stories.Interactive} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="card-docs-side">
+    <OnThisPageNav storyId="components-primitives-card--docs" />
+  </aside>
+</div>

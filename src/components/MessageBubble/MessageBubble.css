@@ -1,0 +1,53 @@
+.ds-message-bubble {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 340px;
+  max-width: 100%;
+  padding-inline: 16px;
+}
+
+.ds-message-bubble[data-direction='outgoing'] {
+  justify-content: flex-end;
+}
+
+.ds-message-bubble[data-direction='outgoing'] {
+  flex-direction: row-reverse;
+}
+
+.ds-message-bubble__avatar {
+  flex: none;
+}
+
+.ds-message-bubble__bubble {
+  max-width: 268px;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.ds-message-bubble[data-direction='incoming'] .ds-message-bubble__bubble {
+  background: var(--core-color-neutral-gray-200);
+}
+
+.ds-message-bubble[data-direction='outgoing'] .ds-message-bubble__bubble {
+  background: var(--semantic-color-text-primary);
+}
+
+.ds-message-bubble__content {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+  font-size: calc(var(--core-typography-font-size-14) * 1px);
+  line-height: calc(var(--core-typography-line-height-20) * 1px);
+  color: var(--semantic-color-text-primary);
+}
+
+.ds-message-bubble[data-direction='outgoing'] .ds-message-bubble__content {
+  color: var(--semantic-color-text-inverse);
+}
+
+.ds-message-bubble__content > :first-child {
+  margin-top: 0;
+}
+
+.ds-message-bubble__content > :last-child {
+  margin-bottom: 0;
+}

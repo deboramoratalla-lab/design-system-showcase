@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import './BrandDocs.css'
+import { DocsPager } from '../Documentation/DocsPager'
 
 const meta: Meta = {
   title: 'Brand/Wordmark',
@@ -15,6 +16,14 @@ export const WordmarkSystem: Story = {
     <div className="brand-page">
       <img className="brand-media" src="/brand/03-wordmark.svg" alt="Wordmark" />
       <img className="brand-media" src="/brand/03-wordmark-variants.svg" alt="Wordmark variants" />
-    </div>
+    
+
+      <DocsPager
+        prevHref="?path=/story/brand-logo--logo-system"
+        prevLabel="Brand / Logo"
+        nextHref="?path=/story/brand-colors--colors"
+        nextLabel="Brand / Colors"
+      />
+</div>
   ),
 }

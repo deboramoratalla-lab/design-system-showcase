@@ -1,0 +1,71 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './ChoiceChipGroup.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page choice-chip-group-circuit-page choice-chip-group-docs-layout">
+  <div className="choice-chip-group-docs-main">
+    <header className="docs-hero choice-chip-group-docs-hero">
+      <h1 className="docs-title">Choice chip group</h1>
+      <p className="choice-chip-group-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Choice chip group arranges multiple choice chips into a lightweight selection set for single or multiple answers.
+      </p>
+    </header>
+
+    <section className="choice-chip-group-docs-section choice-chip-group-docs-section--intro">
+      <div className="choice-chip-group-docs-box">
+        <div className="choice-chip-group-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+      <div className="choice-chip-group-docs-box choice-chip-group-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="choice-chip-group-docs-section">
+      <h2>When to use it</h2>
+      <div className="choice-chip-group-docs-box">
+        <p>Use choice chip group when users need to answer from a short list of lightweight options and scan them together as a set.</p>
+      </div>
+    </section>
+
+    <section className="choice-chip-group-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="choice-chip-group-docs-box">
+        <ul className="docs-list">
+          <li>Do make the selection model explicit through surrounding context.</li>
+          <li>Do keep the number of options manageable so chips remain scannable.</li>
+          <li>Do use single select for mutually exclusive answers and multiple only when combinations are meaningful.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="choice-chip-group-docs-section">
+      <h2>Component variations</h2>
+
+      <article className="choice-chip-group-docs-variant">
+        <h3>Multiple select</h3>
+        <div className="choice-chip-group-docs-box">
+          <div className="choice-chip-group-example-window">
+            <Canvas of={Stories.MultipleSelect} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="choice-chip-group-docs-variant">
+        <h3>Disabled option</h3>
+        <div className="choice-chip-group-docs-box">
+          <div className="choice-chip-group-example-window">
+            <Canvas of={Stories.DisabledOption} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="choice-chip-group-docs-side">
+    <OnThisPageNav storyId="components-form-controls-choice-chip-group--docs" />
+  </aside>
+</div>

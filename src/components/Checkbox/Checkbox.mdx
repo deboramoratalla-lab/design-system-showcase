@@ -1,0 +1,97 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Checkbox.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page checkbox-circuit-page checkbox-docs-layout">
+  <div className="checkbox-docs-main">
+    <header className="docs-hero checkbox-docs-hero">
+      <h1 className="docs-title">Checkbox</h1>
+      <p className="checkbox-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Checkboxes let users select one or more options from a group, or represent a mixed state when part of a set is selected.
+      </p>
+    </header>
+
+    <section className="checkbox-docs-section checkbox-docs-section--intro">
+      <div className="checkbox-docs-box">
+        <div className="checkbox-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+      <div className="checkbox-docs-box checkbox-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="checkbox-docs-section">
+      <h2>When to use it</h2>
+      <div className="checkbox-docs-box">
+        <p>Use checkboxes when users can choose multiple items independently, or when a parent row needs a mixed selection state.</p>
+      </div>
+    </section>
+
+    <section className="checkbox-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="checkbox-docs-box">
+        <ul className="docs-list">
+          <li>Do use checkboxes for independent choices, not mutually exclusive ones.</li>
+          <li>Do use the indeterminate state only as feedback for partially selected groups.</li>
+          <li>Do keep labels close to the control and make the entire row easy to tap when possible.</li>
+          <li>Do keep one checkbox size within the same local option group.</li>
+          <li>Do avoid using a checkbox as a primary action trigger.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="checkbox-docs-section">
+      <h2>Component variations</h2>
+
+      <article className="checkbox-docs-variant">
+        <h3>States</h3>
+        <div className="checkbox-docs-box">
+          <p>
+            Interaction states start from the default enabled control, then show hover, focus, and disabled rendering.
+          </p>
+          <div className="checkbox-example-window">
+            <Canvas of={Stories.States} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="checkbox-docs-variant">
+        <h3>Selection states</h3>
+        <div className="checkbox-docs-box">
+          <p>Checkboxes support unchecked, checked, and indeterminate selection states.</p>
+          <div className="checkbox-example-window">
+            <Canvas of={Stories.SelectionStates} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="checkbox-docs-variant">
+        <h3>Disabled</h3>
+        <div className="checkbox-docs-box">
+          <p>Disabled checkboxes should still communicate whether the option is unchecked, checked, or indeterminate.</p>
+          <div className="checkbox-example-window">
+            <Canvas of={Stories.Disabled} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="checkbox-docs-variant">
+        <h3>Sizes</h3>
+        <div className="checkbox-docs-box">
+          <p>The component supports <code>sm</code>, <code>md</code>, and <code>lg</code> sizes. Keep one size per group for visual consistency.</p>
+          <div className="checkbox-example-window">
+            <Canvas of={Stories.Sizes} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="checkbox-docs-side">
+    <OnThisPageNav storyId="components-primitives-checkbox--docs" />
+  </aside>
+</div>

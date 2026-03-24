@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './DayContextCard.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page day-context-card-circuit-page day-context-card-docs-layout">
+  <div className="day-context-card-docs-main">
+    <header className="docs-hero day-context-card-docs-hero">
+      <h1 className="docs-title">Day context card</h1>
+      <p className="day-context-card-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Day context cards summarize the type of day and key calendar details so users can orient themselves before acting.
+      </p>
+    </header>
+    <section className="day-context-card-docs-section day-context-card-docs-section--intro">
+      <div className="day-context-card-docs-box"><div className="day-context-card-example-window"><Canvas of={Stories.Base} sourceState="hidden" /></div></div>
+      <div className="day-context-card-docs-box day-context-card-docs-box--props"><Controls of={Stories.Base} /></div>
+    </section>
+    <section className="day-context-card-docs-section">
+      <h2>When to use it</h2>
+      <div className="day-context-card-docs-box"><p>Use day context cards at the top of a daily flow when the user needs a quick reminder of what kind of session or schedule they are in.</p></div>
+    </section>
+    <section className="day-context-card-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="day-context-card-docs-box">
+        <ul className="docs-list">
+          <li>Do make the day type the most prominent signal.</li>
+          <li>Do keep the metadata short enough to scan at a glance.</li>
+          <li>Do use the trailing affordance only when the card is truly interactive.</li>
+        </ul>
+      </div>
+    </section>
+    <section className="day-context-card-docs-section">
+      <h2>Component variations</h2>
+      <article className="day-context-card-docs-variant"><h3>Variants</h3><div className="day-context-card-docs-box"><div className="day-context-card-example-window"><Canvas of={Stories.Variants} sourceState="hidden" /></div></div></article>
+    </section>
+  </div>
+  <aside className="day-context-card-docs-side"><OnThisPageNav storyId="components-patterns-day-context-card--docs" /></aside>
+</div>

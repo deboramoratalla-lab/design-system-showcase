@@ -1,0 +1,39 @@
+.ds-form-section {
+  width: 343px;
+  max-width: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+.ds-form-section__label,
+.ds-form-section__description {
+  margin: 0;
+}
+
+.ds-form-section__label {
+  font-family: var(--core-typography-font-family-primary), 'Gustavo', sans-serif;
+  font-size: calc(var(--core-typography-font-size-22) * 1px);
+  line-height: calc(var(--core-typography-line-height-24) * 1px);
+  color: var(--semantic-color-text-primary);
+}
+
+.ds-form-section__meta {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+  font-size: calc(var(--core-typography-font-size-12) * 1px);
+  line-height: calc(var(--core-typography-line-height-16) * 1px);
+  color: var(--semantic-color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ds-form-section__description {
+  font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
+  font-size: calc(var(--core-typography-font-size-15) * 1px);
+  line-height: calc(var(--core-typography-line-height-20) * 1px);
+  color: var(--semantic-color-text-primary);
+}
+
+.ds-form-section__content {
+  display: grid;
+  gap: 12px;
+}

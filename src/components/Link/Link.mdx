@@ -1,0 +1,72 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Link.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page link-circuit-page link-docs-layout">
+  <div className="link-docs-main">
+    <header className="docs-hero link-docs-hero">
+      <h1 className="docs-title">Link</h1>
+      <p className="link-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Links trigger navigation through text-first affordances and should feel lighter than buttons when the action is primarily about going somewhere.
+      </p>
+    </header>
+
+    <section className="link-docs-section link-docs-section--intro">
+      <div className="link-docs-box">
+        <div className="link-example-window">
+          <Canvas of={Stories.Base} sourceState="hidden" />
+        </div>
+      </div>
+      <div className="link-docs-box link-docs-box--props">
+        <Controls of={Stories.Base} />
+      </div>
+    </section>
+
+    <section className="link-docs-section">
+      <h2>When to use it</h2>
+      <div className="link-docs-box">
+        <p>Use links when the main purpose is navigation, access to more information, or opening related content without the weight of a full button.</p>
+      </div>
+    </section>
+
+    <section className="link-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="link-docs-box">
+        <ul className="docs-list">
+          <li>Do use links for navigation, not for committing or confirming actions.</li>
+          <li>Do keep link labels explicit enough to make destination clear out of context.</li>
+          <li>Do use icons sparingly and only when they add directional meaning.</li>
+          <li>Do keep links visually lighter than buttons in the same view hierarchy.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section className="link-docs-section">
+      <h2>Component variations</h2>
+
+      <article className="link-docs-variant">
+        <h3>With icons</h3>
+        <div className="link-docs-box">
+          <div className="link-example-window">
+            <Canvas of={Stories.WithIcons} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+
+      <article className="link-docs-variant">
+        <h3>Tones</h3>
+        <div className="link-docs-box">
+          <div className="link-example-window">
+            <Canvas of={Stories.Tones} sourceState="hidden" />
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <aside className="link-docs-side">
+    <OnThisPageNav storyId="components-primitives-link--docs" />
+  </aside>
+</div>

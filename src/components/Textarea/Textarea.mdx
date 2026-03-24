@@ -1,0 +1,43 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Textarea.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page textarea-circuit-page textarea-docs-layout">
+  <div className="textarea-docs-main">
+    <header className="docs-hero textarea-docs-hero">
+      <h1 className="docs-title">Textarea</h1>
+      <p className="textarea-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Textareas capture longer freeform responses when a single-line field would be too restrictive.
+      </p>
+    </header>
+    <section className="textarea-docs-section textarea-docs-section--intro">
+      <div className="textarea-docs-box"><div className="textarea-example-window"><Canvas of={Stories.Base} sourceState="hidden" /></div></div>
+      <div className="textarea-docs-box textarea-docs-box--props"><Controls of={Stories.Base} /></div>
+    </section>
+    <section className="textarea-docs-section">
+      <h2>When to use it</h2>
+      <div className="textarea-docs-box"><p>Use textarea for reflections, notes, explanations, and any input that may span multiple lines. In product flows, it often sits under external prompt copy rather than owning the full question itself.</p></div>
+    </section>
+    <section className="textarea-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="textarea-docs-box">
+        <ul className="docs-list">
+          <li>Do pair the field with surrounding prompt copy when the question lives outside the input.</li>
+          <li>Do use the fill and outline variants intentionally depending on contrast and hierarchy.</li>
+          <li>Do surface errors close to the field.</li>
+        </ul>
+      </div>
+    </section>
+    <section className="textarea-docs-section">
+      <h2>Component variations</h2>
+      <article className="textarea-docs-variant"><h3>Outlined</h3><div className="textarea-docs-box"><div className="textarea-example-window"><Canvas of={Stories.Outlined} sourceState="hidden" /></div></div></article>
+      <article className="textarea-docs-variant"><h3>In form context</h3><div className="textarea-docs-box"><div className="textarea-example-window"><Canvas of={Stories.InFormContext} sourceState="hidden" /></div></div></article>
+      <article className="textarea-docs-variant"><h3>With value</h3><div className="textarea-docs-box"><div className="textarea-example-window"><Canvas of={Stories.WithValue} sourceState="hidden" /></div></div></article>
+      <article className="textarea-docs-variant"><h3>With error</h3><div className="textarea-docs-box"><div className="textarea-example-window"><Canvas of={Stories.WithError} sourceState="hidden" /></div></div></article>
+      <article className="textarea-docs-variant"><h3>Disabled</h3><div className="textarea-docs-box"><div className="textarea-example-window"><Canvas of={Stories.Disabled} sourceState="hidden" /></div></div></article>
+    </section>
+  </div>
+  <aside className="textarea-docs-side"><OnThisPageNav storyId="components-form-controls-textarea--docs" /></aside>
+</div>

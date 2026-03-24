@@ -1,22 +1,16 @@
 .welcome-page {
   min-height: calc(100vh - 48px);
-  padding: clamp(28px, 4vw, 64px);
+  padding: clamp(40px, 6vw, 96px);
   display: grid;
-  gap: clamp(34px, 5vw, 72px);
+  gap: clamp(46px, 6vw, 92px);
   background: var(--semantic-color-surface-primary);
   color: var(--semantic-color-text-primary);
 }
 
 .welcome-header {
   display: grid;
-  gap: 16px;
-  max-width: 860px;
-}
-
-.welcome-logo {
-  width: 220px;
-  height: auto;
-  display: block;
+  gap: 18px;
+  max-width: 980px;
 }
 
 .welcome-title {
@@ -30,55 +24,77 @@
   margin: 0;
   font-family: var(--core-typography-font-family-secondary), "Surt", sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 1.45;
+  font-size: 19px;
+  line-height: 1.62;
   color: var(--semantic-color-text-primary);
+  max-width: 760px;
+}
+
+.welcome-intro {
+  display: grid;
+  gap: 12px;
+  max-width: 860px;
+}
+
+.welcome-intro h2 {
+  margin: 0;
+  font-family: var(--core-typography-font-family-primary), "Gustavo", sans-serif;
+  font-size: 28px;
+}
+
+.welcome-intro ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.welcome-shortcuts {
+  display: grid;
+  gap: 12px;
+}
+
+.welcome-shortcuts h2 {
+  margin: 0;
+  font-family: var(--core-typography-font-family-primary), "Gustavo", sans-serif;
+  font-size: 28px;
 }
 
 .welcome-grid {
   display: grid;
-  gap: 20px;
+  gap: 28px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.welcome-quicklinks {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.welcome-quicklink {
-  text-decoration: none;
-  color: var(--semantic-color-text-primary);
-  border: 1px solid var(--semantic-color-border-subtle);
-  border-radius: 999px;
-  background: var(--semantic-color-surface-secondary);
-  padding: 8px 14px;
-  font-size: 13px;
-  line-height: 1;
-  font-weight: 500;
-}
-
-.welcome-quicklink:hover {
-  background: color-mix(in srgb, var(--core-color-brand-ice-blue-100) 55%, transparent);
 }
 
 .welcome-card {
   border: 1px solid var(--semantic-color-border-subtle);
   border-radius: 14px;
-  background: var(--semantic-color-surface-secondary);
+  background: #fff;
   overflow: hidden;
   display: grid;
   align-content: start;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.welcome-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--semantic-color-action-primary-default) 34%, var(--semantic-color-border-subtle));
+  box-shadow: 0 10px 24px rgba(18, 40, 46, 0.08);
 }
 
 .welcome-card-art {
-  height: 108px;
-  background-color: #000;
+  height: 118px;
+  background-color: var(--semantic-color-action-primary-default);
+  --welcome-art-line: color-mix(in srgb, var(--semantic-color-text-primary) 30%, transparent);
   background-image:
-    linear-gradient(90deg, transparent 0 4%, #fff 4% 5%, transparent 5% 24%, #fff 24% 25%, transparent 25% 44%, #fff 44% 45%, transparent 45% 64%, #fff 64% 65%, transparent 65% 84%, #fff 84% 85%, transparent 85% 100%),
-    radial-gradient(circle at 20% 40%, transparent 0 22px, #fff 22px 24px, transparent 24px),
-    radial-gradient(circle at 56% 72%, transparent 0 30px, #fff 30px 32px, transparent 32px);
+    linear-gradient(90deg, transparent 0 4%, var(--welcome-art-line) 4% 5%, transparent 5% 24%, var(--welcome-art-line) 24% 25%, transparent 25% 44%, var(--welcome-art-line) 44% 45%, transparent 45% 64%, var(--welcome-art-line) 64% 65%, transparent 65% 84%, var(--welcome-art-line) 84% 85%, transparent 85% 100%),
+    radial-gradient(circle at 20% 40%, transparent 0 22px, var(--welcome-art-line) 22px 24px, transparent 24px),
+    radial-gradient(circle at 56% 72%, transparent 0 30px, var(--welcome-art-line) 30px 32px, transparent 32px);
 }
 
 .welcome-card-body {
@@ -99,73 +115,35 @@
   font-family: var(--core-typography-font-family-secondary), "Surt", sans-serif;
   font-weight: 300;
   color: var(--semantic-color-text-primary);
-  font-size: 14px;
-}
-
-.welcome-links {
-  margin: 2px 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 6px;
-}
-
-.welcome-links li {
-  min-width: 0;
-}
-
-.welcome-links a {
-  text-decoration: none;
-  color: var(--semantic-color-text-primary);
-  font-size: 14px;
-  line-height: 1.4;
-  border-bottom: 1px solid transparent;
-}
-
-.welcome-links a:hover {
-  border-bottom-color: currentColor;
-}
-
-.welcome-card-color .welcome-card-art {
-  background-image:
-    radial-gradient(circle at 14% 50%, transparent 0 26px, #fff 26px 28px, transparent 28px),
-    radial-gradient(circle at 40% 50%, transparent 0 26px, #fff 26px 28px, transparent 28px),
-    radial-gradient(circle at 66% 50%, transparent 0 26px, #fff 26px 28px, transparent 28px),
-    radial-gradient(circle at 92% 50%, transparent 0 26px, #fff 26px 28px, transparent 28px);
-}
-
-.welcome-card-type .welcome-card-art {
-  background-image:
-    linear-gradient(0deg, transparent 0 70%, #fff 70% 73%, transparent 73% 100%),
-    linear-gradient(120deg, transparent 0 15%, #fff 15% 17%, transparent 17% 100%),
-    radial-gradient(circle at 80% 78%, transparent 0 34px, #fff 34px 36px, transparent 36px);
-}
-
-.welcome-card-layout .welcome-card-art {
-  background-image:
-    linear-gradient(90deg, transparent 0 11%, #fff 11% 12%, transparent 12% 22%, #fff 22% 23%, transparent 23% 33%, #fff 33% 34%, transparent 34% 44%, #fff 44% 45%, transparent 45% 55%, #fff 55% 56%, transparent 56% 66%, #fff 66% 67%, transparent 67% 77%, #fff 77% 78%, transparent 78% 88%, #fff 88% 89%, transparent 89% 100%),
-    linear-gradient(0deg, transparent 0 28%, #fff 28% 29%, transparent 29% 58%, #fff 58% 59%, transparent 59% 100%);
-}
-
-.welcome-card-components .welcome-card-art {
-  background-image:
-    linear-gradient(145deg, transparent 0 20%, #fff 20% 22%, transparent 22% 52%, #fff 52% 54%, transparent 54% 84%, #fff 84% 86%, transparent 86% 100%),
-    radial-gradient(circle at 82% 30%, transparent 0 18px, #fff 18px 20px, transparent 20px);
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .welcome-card-brand .welcome-card-art {
+  background-color: var(--core-color-brand-ice-blue-200);
+  --welcome-art-line: color-mix(in srgb, var(--core-color-brand-ice-blue-700) 30%, transparent);
   background-image:
-    linear-gradient(55deg, transparent 0 30%, #fff 30% 32%, transparent 32% 52%, #fff 52% 54%, transparent 54% 74%, #fff 74% 76%, transparent 76% 100%),
-    radial-gradient(circle at 22% 72%, transparent 0 24px, #fff 24px 26px, transparent 26px);
+    linear-gradient(55deg, transparent 0 30%, var(--welcome-art-line) 30% 32%, transparent 32% 52%, var(--welcome-art-line) 52% 54%, transparent 54% 74%, var(--welcome-art-line) 74% 76%, transparent 76% 100%),
+    radial-gradient(circle at 22% 72%, transparent 0 24px, var(--welcome-art-line) 24px 26px, transparent 26px);
 }
 
 .welcome-card-tokens .welcome-card-art {
+  background-color: var(--core-color-brand-avocado-green-200);
+  --welcome-art-line: color-mix(in srgb, var(--core-color-brand-avocado-green-700) 28%, transparent);
   background-image:
-    radial-gradient(circle at 16% 42%, transparent 0 19px, #fff 19px 21px, transparent 21px),
-    radial-gradient(circle at 36% 42%, transparent 0 19px, #fff 19px 21px, transparent 21px),
-    radial-gradient(circle at 56% 42%, transparent 0 19px, #fff 19px 21px, transparent 21px),
-    radial-gradient(circle at 76% 42%, transparent 0 19px, #fff 19px 21px, transparent 21px),
-    linear-gradient(0deg, transparent 0 68%, #fff 68% 69%, transparent 69% 100%);
+    radial-gradient(circle at 16% 42%, transparent 0 19px, var(--welcome-art-line) 19px 21px, transparent 21px),
+    radial-gradient(circle at 36% 42%, transparent 0 19px, var(--welcome-art-line) 19px 21px, transparent 21px),
+    radial-gradient(circle at 56% 42%, transparent 0 19px, var(--welcome-art-line) 19px 21px, transparent 21px),
+    radial-gradient(circle at 76% 42%, transparent 0 19px, var(--welcome-art-line) 19px 21px, transparent 21px),
+    linear-gradient(0deg, transparent 0 68%, var(--welcome-art-line) 68% 69%, transparent 69% 100%);
+}
+
+.welcome-card-components .welcome-card-art {
+  background-color: var(--core-color-brand-grape-lilac-200);
+  --welcome-art-line: color-mix(in srgb, var(--core-color-brand-grape-lilac-700) 30%, transparent);
+  background-image:
+    linear-gradient(145deg, transparent 0 20%, var(--welcome-art-line) 20% 22%, transparent 22% 52%, var(--welcome-art-line) 52% 54%, transparent 54% 84%, var(--welcome-art-line) 84% 86%, transparent 86% 100%),
+    radial-gradient(circle at 82% 30%, transparent 0 18px, var(--welcome-art-line) 18px 20px, transparent 20px);
 }
 
 @media (max-width: 640px) {
@@ -177,11 +155,65 @@
     font-size: 16px;
   }
 
-  .welcome-card {
-    min-height: 0;
-  }
-
   .welcome-card h3 {
     font-size: 34px;
   }
+}
+
+.welcome-changelog-list {
+  display: grid;
+  gap: 16px;
+  max-width: 980px;
+}
+
+.welcome-changelog-card {
+  border: 1px solid var(--semantic-color-border-subtle);
+  border-radius: 14px;
+  background: var(--semantic-color-surface-secondary);
+  padding: 18px 20px;
+  display: grid;
+  gap: 12px;
+}
+
+.welcome-changelog-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid color-mix(in srgb, var(--semantic-color-border-subtle) 60%, transparent);
+  padding-bottom: 10px;
+}
+
+.welcome-changelog-head h2 {
+  margin: 0;
+  font-family: var(--core-typography-font-family-primary), "Gustavo", sans-serif;
+  font-size: 28px;
+}
+
+.welcome-changelog-head span {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--semantic-color-text-secondary);
+}
+
+.welcome-changelog-group {
+  display: grid;
+  gap: 6px;
+}
+
+.welcome-changelog-group h3 {
+  margin: 0;
+  font-family: var(--core-typography-font-family-secondary), "Surt", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.welcome-changelog-group ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 400;
 }

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import './BrandDocs.css'
+import { DocsPager } from '../Documentation/DocsPager'
 
 const meta: Meta = {
   title: 'Brand/Logo',
@@ -17,6 +18,14 @@ export const LogoSystem: Story = {
       <img className="brand-media" src="/brand/02-logo-white.svg" alt="Logo white" />
       <img className="brand-media" src="/brand/02-logo-color.svg" alt="Logo color" />
       <img className="brand-media" src="/brand/02-logo-inspiration.svg" alt="Logo inspiration" />
-    </div>
+    
+
+      <DocsPager
+        prevHref="?path=/story/foundations-borders-radius--borders-and-radius"
+        prevLabel="Foundations / Borders & Radius"
+        nextHref="?path=/story/brand-wordmark--wordmark-system"
+        nextLabel="Brand / Wordmark"
+      />
+</div>
   ),
 }

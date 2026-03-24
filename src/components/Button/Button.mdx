@@ -1,0 +1,173 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './Button.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page button-circuit-page button-docs-layout">
+  <div className="button-docs-main">
+
+  <header className="docs-hero button-docs-hero">
+    <h1 className="docs-title">Button</h1>
+    <p
+      className="button-description sb-unstyled"
+      style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}
+    >
+      Buttons allow users to initiate an action or command when clicked or tapped, which makes them
+      a fundamental building block of our products.
+    </p>
+  </header>
+
+  <section className="button-docs-section button-docs-section--intro">
+    <div className="button-docs-box">
+      <div className="button-example-window">
+        <Canvas of={Stories.Base} sourceState="hidden" />
+      </div>
+    </div>
+    <div className="button-docs-box button-docs-box--props">
+      <Controls of={Stories.Base} />
+    </div>
+  </section>
+
+  <section className="button-docs-section">
+    <h2>When to use it</h2>
+    <div className="button-docs-box">
+      <p>Use buttons when users need to either navigate through a product or perform a specific action.</p>
+    </div>
+  </section>
+
+  <section className="button-docs-section">
+    <h2>Usage guidelines</h2>
+    <div className="button-docs-box">
+      <ul className="docs-list">
+        <li>Do always label a button in a clear and understandable way.</li>
+        <li>Do always think about the priority of the action to be taken when choosing a type of button.</li>
+        <li>Do position buttons in a predictable and coherent way throughout the product.</li>
+        <li>Do combine different button types if you have more than one button in a specific screen.</li>
+        <li>Do use a loading state to provide feedback for our user when the action revolves around saving or inputting information, especially when it could take some seconds.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section className="button-docs-section">
+    <h2>Content guidelines</h2>
+    <div className="button-docs-box">
+      <ul className="docs-list">
+        <li>Do always start the label with an actionable verb accompanied by a noun to provide enough context (example: <code>Confirm order</code>). The only exceptions are the following common actions: <code>Save</code>, <code>Cancel</code>, and <code>Close</code>.</li>
+        <li>Do keep the label to a maximum of 3 words.</li>
+        <li>Do not capitalize all words of the label, just the first word or brand/product words (such as Apple Pay, for example).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section className="button-docs-section">
+    <h2>Component variations</h2>
+
+    <article className="button-docs-variant">
+      <h3>Variants</h3>
+      <div className="button-docs-box">
+        <div className="button-example-window">
+          <Canvas of={Stories.Variants} sourceState="hidden" />
+        </div>
+        <p>
+          The <strong>primary button</strong> should be used for the most important action. There should usually
+          be just one primary button visible per context.
+        </p>
+        <p>
+          The <strong>secondary button</strong> should be used for secondary actions to complement a primary action,
+          or when multiple actions of equal importance are required.
+        </p>
+        <p>
+          The <strong>tertiary button</strong> should be used for supportive actions, and can be paired with
+          either primary or secondary.
+        </p>
+      </div>
+    </article>
+
+    <article className="button-docs-variant">
+      <h3>Destructive</h3>
+      <div className="button-docs-box">
+        <div className="button-example-window">
+          <Canvas of={Stories.Destructive} sourceState="hidden" />
+        </div>
+        <p>
+          The <strong>destructive button</strong> should be used for irreversible or other actions that require
+          special attention from the user.
+        </p>
+      </div>
+    </article>
+
+    <article className="button-docs-variant">
+      <h3>Sizes</h3>
+      <div className="button-docs-box">
+        <p>The button component supports different sizes:</p>
+        <ul className="docs-list">
+          <li>Buttons are medium-sized (<code>md</code>) by default and should be used in most cases.</li>
+          <li>Small size (<code>sm</code>) can be used when space is limited and the action is less significant.</li>
+          <li>Large size (<code>lg</code>) can be used for high-emphasis CTA contexts.</li>
+        </ul>
+        <div className="button-example-window">
+          <Canvas of={Stories.Sizes} sourceState="hidden" />
+        </div>
+      </div>
+    </article>
+
+    <article className="button-docs-variant">
+      <h3>With Icons</h3>
+      <div className="button-docs-box">
+        <ul className="docs-list">
+          <li>A <strong>leading icon</strong> provides additional context for the button action.</li>
+          <li>A <strong>trailing icon</strong> hints at a navigation or non-obvious next step.</li>
+        </ul>
+        <div className="button-example-window">
+          <Canvas of={Stories.WithIcons} sourceState="hidden" />
+        </div>
+      </div>
+    </article>
+
+    <article className="button-docs-variant">
+      <h3>Icon only</h3>
+      <div className="button-docs-box">
+        <p>Use <code>iconOnly</code> for compact icon-only actions when the context already makes the action obvious.</p>
+        <ul className="docs-list">
+          <li>Always provide an <code>aria-label</code> because the button has no visible text.</li>
+          <li>Prefer this pattern for utility actions like add, close, back, or overflow.</li>
+        </ul>
+        <div className="button-example-window">
+          <Canvas of={Stories.IconOnly} sourceState="hidden" />
+        </div>
+      </div>
+    </article>
+
+    <article className="button-docs-variant">
+      <h3>Loading</h3>
+      <div className="button-docs-box">
+        <p>When the button action is inputting or saving information, indicate loading with the <code>loading</code> prop.</p>
+        <div className="button-example-window">
+          <Canvas of={Stories.Loading} sourceState="hidden" />
+        </div>
+      </div>
+    </article>
+
+    <article className="button-docs-variant">
+      <h3>Button group</h3>
+      <div className="button-docs-box">
+        <p>
+          Used when users have two opposite actions in the same step of a flow. It is generally aligned right,
+          with the primary button as expected action.
+        </p>
+        <div className="button-example-window">
+          <Canvas of={Stories.ButtonGroup} sourceState="hidden" />
+        </div>
+        <ul className="docs-list">
+          <li>Use the same verbal tenses for both actions.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  </div>
+  <aside className="button-docs-side">
+    <OnThisPageNav storyId="components-primitives-button--docs" />
+  </aside>
+</div>

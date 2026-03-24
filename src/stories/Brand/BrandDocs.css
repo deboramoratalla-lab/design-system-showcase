@@ -1,14 +1,16 @@
 .brand-page {
   display: grid;
-  gap: 24px;
-  padding: 24px;
+  gap: 34px;
+  padding: clamp(40px, 6vw, 96px);
+  background: #fff;
   color: var(--semantic-color-text-primary);
   font-family: var(--core-typography-font-family-secondary), 'Surt', sans-serif;
 }
 
 .brand-hero {
   display: grid;
-  gap: 12px;
+  gap: 16px;
+  max-width: 980px;
 }
 
 .brand-title {
@@ -20,25 +22,25 @@
 
 .brand-subtitle {
   margin: 0;
-  font-size: 18px;
-  line-height: 1.4;
+  font-size: 19px;
+  line-height: 1.62;
   color: var(--semantic-color-text-primary);
   font-weight: 400;
 }
 
 .brand-grid-2 {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .brand-card {
-  border: 1px solid var(--semantic-color-border-subtle);
-  border-radius: 14px;
-  background: var(--semantic-color-surface-secondary);
-  padding: 16px;
+  border: 1px solid color-mix(in srgb, var(--semantic-color-border-subtle) 55%, transparent);
+  border-radius: 12px;
+  background: #fff;
+  padding: 24px;
   display: grid;
-  gap: 12px;
+  gap: 14px;
 }
 
 .brand-card h3 {
@@ -51,7 +53,7 @@
   margin: 0;
   color: var(--semantic-color-text-primary);
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.62;
 }
 
 .brand-media {
@@ -179,7 +181,7 @@
   display: grid;
   place-items: center;
   border-radius: 10px;
-  border: 1px solid var(--semantic-color-border-default);
+  border: 1px solid var(--semantic-color-border-subtle);
   background: var(--semantic-color-surface-primary);
   color: var(--semantic-color-text-primary);
 }
@@ -373,7 +375,7 @@
 }
 
 .icons-overview-download {
-  border: 1px solid var(--semantic-color-border-default);
+  border: 1px solid var(--semantic-color-border-subtle);
   border-radius: 999px;
   background: var(--semantic-color-surface-primary);
   color: var(--semantic-color-text-primary);
@@ -387,9 +389,9 @@
 }
 
 .icons-overview-search-wrap {
-  border: 1px solid var(--semantic-color-border-subtle);
+  border: 1px solid color-mix(in srgb, var(--semantic-color-border-subtle) 55%, transparent);
   border-radius: 10px;
-  background: var(--semantic-color-surface-secondary);
+  background: #fff;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -404,8 +406,8 @@
 }
 
 .icons-filter-btn {
-  border: 1px solid var(--semantic-color-border-default);
-  background: var(--semantic-color-surface-primary);
+  border: 1px solid color-mix(in srgb, var(--semantic-color-border-subtle) 65%, transparent);
+  background: #fff;
   color: var(--semantic-color-text-primary);
   border-radius: 999px;
   padding: 6px 12px;
@@ -416,7 +418,7 @@
 
 .icons-filter-btn.is-active {
   background: var(--semantic-color-action-primary-default);
-  color: var(--semantic-color-text-on-action);
+  color: var(--semantic-color-text-inverse);
   border-color: var(--semantic-color-action-primary-default);
 }
 
@@ -437,9 +439,9 @@
 
 .icons-overview-library-item {
   min-height: 74px;
-  border: 1px solid var(--semantic-color-border-subtle);
+  border: 1px solid color-mix(in srgb, var(--semantic-color-border-subtle) 50%, transparent);
   border-radius: 12px;
-  background: var(--semantic-color-surface-primary);
+  background: #fff;
   display: grid;
   align-content: center;
   justify-items: center;

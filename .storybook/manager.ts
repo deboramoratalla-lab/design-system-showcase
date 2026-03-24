@@ -1,7 +1,16 @@
 import { addons } from 'storybook/manager-api'
 import { create } from 'storybook/theming'
 
+if (typeof document !== 'undefined') {
+  const style = document.createElement('style')
+  style.innerHTML = "button[aria-controls] svg[type='group'] { display: none !important; }"
+  document.head.appendChild(style)
+}
+
 addons.setConfig({
+  showPanel: true,
+  panelPosition: 'bottom',
+  selectedPanel: 'storybook/controls/panel',
   theme: create({
     base: 'light',
     appBg: '#f9fafa',

@@ -1,0 +1,21 @@
+.ds-carousel-dots {
+  display: inline-flex;
+  align-items: center;
+  padding-inline: 8px;
+}
+
+.ds-carousel-dots__dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--semantic-color-text-inverse);
+}
+
+.ds-carousel-dots__dot + .ds-carousel-dots__dot {
+  margin-left: 16px;
+}
+
+.ds-carousel-dots__dot[data-active='true'] {
+  width: 20px;
+}

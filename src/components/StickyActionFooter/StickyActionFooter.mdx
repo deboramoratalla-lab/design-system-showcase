@@ -1,0 +1,39 @@
+import { Canvas, Controls, Meta } from '@storybook/addon-docs/blocks'
+import * as Stories from './StickyActionFooter.stories'
+import { OnThisPageNav } from '../../stories/Documentation/OnThisPageNav'
+
+<Meta of={Stories} name="Docs" />
+
+<div className="docs-page sticky-action-footer-circuit-page sticky-action-footer-docs-layout">
+  <div className="sticky-action-footer-docs-main">
+    <header className="docs-hero sticky-action-footer-docs-hero">
+      <h1 className="docs-title">Sticky action footer</h1>
+      <p className="sticky-action-footer-description sb-unstyled" style={{ fontSize: '19px', lineHeight: '30px', fontWeight: 400 }}>
+        Sticky action footers keep the primary next step visible while users review or complete longer forms and tasks.
+      </p>
+    </header>
+    <section className="sticky-action-footer-docs-section sticky-action-footer-docs-section--intro">
+      <div className="sticky-action-footer-docs-box"><div className="sticky-action-footer-example-window"><Canvas of={Stories.Base} sourceState="hidden" /></div></div>
+      <div className="sticky-action-footer-docs-box sticky-action-footer-docs-box--props"><Controls of={Stories.Base} /></div>
+    </section>
+    <section className="sticky-action-footer-docs-section">
+      <h2>When to use it</h2>
+      <div className="sticky-action-footer-docs-box"><p>Use sticky action footers when a flow depends on one clear primary action and the screen can scroll beyond the immediate controls.</p></div>
+    </section>
+    <section className="sticky-action-footer-docs-section">
+      <h2>Usage guidelines</h2>
+      <div className="sticky-action-footer-docs-box">
+        <ul className="docs-list">
+          <li>Do keep the helper text short and actionable.</li>
+          <li>Do disable the action only when the reason is understandable from the surrounding screen.</li>
+          <li>Do use one dominant action rather than stacking multiple competing buttons.</li>
+        </ul>
+      </div>
+    </section>
+    <section className="sticky-action-footer-docs-section">
+      <h2>Component variations</h2>
+      <article className="sticky-action-footer-docs-variant"><h3>Disabled</h3><div className="sticky-action-footer-docs-box"><div className="sticky-action-footer-example-window"><Canvas of={Stories.Disabled} sourceState="hidden" /></div></div></article>
+    </section>
+  </div>
+  <aside className="sticky-action-footer-docs-side"><OnThisPageNav storyId="components-patterns-sticky-action-footer--docs" /></aside>
+</div>
