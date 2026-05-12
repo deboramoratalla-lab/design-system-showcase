@@ -1,0 +1,6 @@
+import{r,j as s}from"./iframe-DCrUqz3w.js";import{Q as a}from"./QuickReplyPanel-wo9YDjmK.js";import"./preload-helper-PPVm8Dsz.js";import"./Button-B6wkrrfV.js";import"./Spinner-D69f4xbo.js";import"./createLucideIcon-Cii48iio.js";const n=[{label:"Thanks coach!",value:"thanks"},{label:"Yes coach.",value:"yes"},{label:"Hello.",value:"hello"},{label:"No coach.",value:"no"},{label:"I've completed the task.",value:"completed"},{label:"Noted!",value:"noted"},{label:"Still working on it.",value:"working"},{label:"Thanks for the feedback!",value:"feedback"},{label:"I'm ready!",value:"ready"}],h={title:"Components/Messaging/Quick Reply Panel",component:a,parameters:{layout:"centered"},args:{helperText:"Select a quick reply to respond to your coach.",options:n}},e={render:t=>{const[l,o]=r.useState("thanks");return s.jsx(a,{...t,value:l,onChange:o})}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  render: args => {
+    const [value, setValue] = useState<string | undefined>('thanks');
+    return <QuickReplyPanel {...args} value={value} onChange={setValue} />;
+  }
+}`,...e.parameters?.docs?.source}}};const k=["Base"];export{e as Base,k as __namedExportsOrder,h as default};
