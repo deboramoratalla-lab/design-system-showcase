@@ -1,0 +1,6 @@
+import{j as t}from"./iframe-93ryNioq.js";import{S as r}from"./StatsDateNavigator-C1aVjBCH.js";import{c as o}from"./createLucideIcon-BiUmu-hK.js";import"./preload-helper-PPVm8Dsz.js";import"./TextStack-B6Q3FEgQ.js";const s=[["path",{d:"M8 2v4",key:"1cmpym"}],["path",{d:"M16 2v4",key:"4m81vk"}],["rect",{width:"18",height:"18",x:"3",y:"4",rx:"2",key:"1hopcy"}],["path",{d:"M3 10h18",key:"8toen8"}],["path",{d:"M8 14h.01",key:"6423bh"}],["path",{d:"M12 14h.01",key:"1etili"}],["path",{d:"M16 14h.01",key:"1gbofw"}],["path",{d:"M8 18h.01",key:"lrp35t"}],["path",{d:"M12 18h.01",key:"mhygvu"}],["path",{d:"M16 18h.01",key:"kzsmim"}]],n=o("calendar-days",s),m={title:"Components/Navigation/Patterns/Stats Date Navigator",component:r,parameters:{layout:"centered"},args:{label:"Today",detail:"Saturday Mar 22, 2025",leadingIcon:t.jsx(n,{})}},a={},e={args:{label:"Month",detail:"March 2025"}};a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:"{}",...a.parameters?.docs?.source}}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: 'Month',
+    detail: 'March 2025'
+  }
+}`,...e.parameters?.docs?.source}}};const l=["Default","MonthView"];export{a as Default,e as MonthView,l as __namedExportsOrder,m as default};
