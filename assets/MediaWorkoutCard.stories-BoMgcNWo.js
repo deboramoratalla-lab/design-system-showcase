@@ -1,0 +1,5 @@
+import{M as o}from"./MediaWorkoutCard-CAo2xP-T.js";/* empty css                  */const a={title:"Components/Patterns/Media Workout Card",component:o,parameters:{layout:"centered"},args:{title:"Your mental workout",description:"Once you start the video, you'll need to watch it to the end. Stay focused and make it count!",statusLabel:"To do",ctaLabel:"Start mental workout"}},t={},e={args:{thumbnailSrc:"https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80"}};t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:"{}",...t.parameters?.docs?.source}}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {
+    thumbnailSrc: 'https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1200&q=80'
+  }
+}`,...e.parameters?.docs?.source}}};const r=["Base","WithImage"],n=Object.freeze(Object.defineProperty({__proto__:null,Base:t,WithImage:e,__namedExportsOrder:r,default:a},Symbol.toStringTag,{value:"Module"}));export{t as B,n as S,e as W};
