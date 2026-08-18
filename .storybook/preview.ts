@@ -1,12 +1,22 @@
 import type { Preview } from "@storybook/react-vite";
 import { createElement, Fragment } from "react";
+import { initialize, mswLoader } from "msw-storybook-addon";
+import "../src/styles/fonts.css";
 import "../src/styles/tokens.css";
+import "../src/index.css";
 import "../src/styles/storybook.css";
 import "../src/stories/Documentation/OnThisPageNav.css";
 import { OnThisPageNav } from "../src/stories/Documentation/OnThisPageNav";
+import { mswHandlers } from "./msw-handlers";
+
+initialize({ onUnhandledRequest: "bypass" });
 
 const preview: Preview = {
+  loaders: [mswLoader],
   parameters: {
+    msw: {
+      handlers: mswHandlers,
+    },
     docs: {
       defaultName: "Docs",
     },
@@ -94,11 +104,9 @@ const preview: Preview = {
     },
 
     a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: "todo"
-    }
+      // Accessibility is a release gate: axe violations fail the Storybook test suite.
+      test: "error",
+    },
   },
 
   globalTypes: {
