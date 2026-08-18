@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Gustavo";
+  src:
+    local("Gustavo_trial Light"),
+    local("Gustavo_trial-Light");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gustavo";
+  src:
+    local("Gustavo_trial Regular"),
+    local("Gustavo_trial-Regular");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gustavo";
+  src:
+    local("Gustavo_trial Medium"),
+    local("Gustavo_trial-Medium");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gustavo";
+  src:
+    local("Gustavo_trial Bold"),
+    local("Gustavo_trial-Bold");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Surt";
+  src:
+    local("Surt-Normal-TRIAL Light"),
+    local("Surt-Normal-TRIAL Light-TRIAL"),
+    local("Surt-Normal-TRIAL-Light");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Surt";
+  src:
+    local("Surt-Normal-TRIAL Regular"),
+    local("Surt-Normal-TRIAL-Regular"),
+    local("Surt-Normal-TRIAL -TRIAL");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Surt";
+  src:
+    local("Surt-Normal-TRIAL Medium"),
+    local("Surt-Normal-TRIAL Medium-TRIAL"),
+    local("Surt-Normal-TRIAL-Medium");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Surt";
+  src:
+    local("Surt-Normal-TRIAL Semibold"),
+    local("Surt-Normal-TRIAL Smbold-TRIAL"),
+    local("Surt-Normal-TRIAL-Semibold");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Surt";
+  src:
+    local("Surt-Normal-TRIAL Bold"),
+    local("Surt-Normal-TRIAL-Bold"),
+    local("Surt-Normal-TRIAL");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}

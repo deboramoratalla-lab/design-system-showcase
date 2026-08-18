@@ -3,7 +3,42 @@ import { create } from 'storybook/theming'
 
 if (typeof document !== 'undefined') {
   const style = document.createElement('style')
-  style.innerHTML = "button[aria-controls] svg[type='group'] { display: none !important; }"
+  style.innerHTML = `
+    @font-face {
+      font-family: "Surt";
+      src:
+        local("Surt-Normal-TRIAL Regular"),
+        local("Surt-Normal-TRIAL-Regular"),
+        local("Surt-Normal-TRIAL -TRIAL");
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Surt";
+      src:
+        local("Surt-Normal-TRIAL Semibold"),
+        local("Surt-Normal-TRIAL Smbold-TRIAL"),
+        local("Surt-Normal-TRIAL-Semibold");
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Surt";
+      src:
+        local("Surt-Normal-TRIAL Bold"),
+        local("Surt-Normal-TRIAL-Bold"),
+        local("Surt-Normal-TRIAL");
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    button[aria-controls] svg[type='group'] { display: none !important; }
+  `
   document.head.appendChild(style)
 }
 
